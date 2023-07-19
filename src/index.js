@@ -7,7 +7,6 @@ import './assets/icons/projects.svg';
 import './assets/icons/contact-darkblue.svg';
 import './style.scss';
 
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './components/App.jsx';
 
