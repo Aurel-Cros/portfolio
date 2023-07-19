@@ -37,10 +37,24 @@ const config = {
                 use: [stylesHandler, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                test: /\.(png|jpg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/[name][ext]'
+                    filename: 'assets/images/[name][ext]'
+                }
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[name][ext]'
+                }
+            },
+            {
+                test: /\.(svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/icons/[name][ext]'
                 }
             },
 

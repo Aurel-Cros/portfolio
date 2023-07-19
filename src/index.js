@@ -1,6 +1,10 @@
-import './assets/fr-flag.svg';
-import './assets/uk-flag.svg';
-
+import './assets/icons/fr-flag.svg';
+import './assets/icons/uk-flag.svg';
+import './assets/icons/github-white.svg';
+import './assets/icons/linkedin.svg';
+import './assets/icons/about.svg';
+import './assets/icons/projects.svg';
+import './assets/icons/contact-darkblue.svg';
 import './style.scss';
 
 import React from 'react';

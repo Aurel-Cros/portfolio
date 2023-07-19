@@ -96,7 +96,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ LangSelector)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : \"undefined\" != typeof Symbol && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i[\"return\"] && (_r = _i[\"return\"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\nfunction LangSelector() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('fr'),\n    _useState2 = _slicedToArray(_useState, 2),\n    lang = _useState2[0],\n    setLang = _useState2[1];\n  function switchLang(newState) {\n    setLang(newState);\n    console.log(lang);\n  }\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"lang-selector\" + (lang === 'en' ? ' en' : '')\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    onClick: function onClick() {\n      switchLang('fr');\n    },\n    src: \"./assets/fr-flag.svg\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    onClick: function onClick() {\n      switchLang('en');\n    },\n    src: \"./assets/uk-flag.svg\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"background\"\n  }));\n}\n\n//# sourceURL=webpack://my-webpack-project/./src/components/LangSelector.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ LangSelector)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }\nfunction _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : \"undefined\" != typeof Symbol && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i[\"return\"] && (_r = _i[\"return\"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\nfunction LangSelector() {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('fr'),\n    _useState2 = _slicedToArray(_useState, 2),\n    lang = _useState2[0],\n    setLang = _useState2[1];\n  function switchLang(newState) {\n    setLang(newState);\n  }\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"lang-selector\" + (lang === 'en' ? ' en' : '')\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    onClick: function onClick() {\n      switchLang('fr');\n    },\n    src: \"./assets/fr-flag.svg\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    onClick: function onClick() {\n      switchLang('en');\n    },\n    src: \"./assets/uk-flag.svg\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"background\"\n  }));\n}\n\n//# sourceURL=webpack://my-webpack-project/./src/components/LangSelector.jsx?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ NavBar)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _LangSelector_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LangSelector.jsx */ \"./src/components/LangSelector.jsx\");\n\n\nfunction NavBar() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"navbar\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LangSelector_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n}\n\n//# sourceURL=webpack://my-webpack-project/./src/components/NavBar.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ NavBar)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _LangSelector_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LangSelector.jsx */ \"./src/components/LangSelector.jsx\");\n\n\nfunction NavBar() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"navbar\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LangSelector_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"socials\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, \"Find me\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    alt: \"GitHub link\",\n    src: \"./assets/icons/github.svg\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    alt: \"LinkedIn link\",\n    src: \"./assets/icons/linkedin.svg\"\n  })));\n}\n\n//# sourceURL=webpack://my-webpack-project/./src/components/NavBar.jsx?");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_fr_flag_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/fr-flag.svg */ \"./src/assets/fr-flag.svg\");\n/* harmony import */ var _assets_uk_flag_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/uk-flag.svg */ \"./src/assets/uk-flag.svg\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./App.jsx */ \"./src/App.jsx\");\n\n\n\n\n\n\nvar root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_4__.createRoot)(document.querySelector(\"#root\"));\nroot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null));\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_icons_fr_flag_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/icons/fr-flag.svg */ \"./src/assets/icons/fr-flag.svg\");\n/* harmony import */ var _assets_icons_uk_flag_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/icons/uk-flag.svg */ \"./src/assets/icons/uk-flag.svg\");\n/* harmony import */ var _assets_icons_github_white_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/icons/github-white.svg */ \"./src/assets/icons/github-white.svg\");\n/* harmony import */ var _assets_icons_linkedin_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/icons/linkedin.svg */ \"./src/assets/icons/linkedin.svg\");\n/* harmony import */ var _assets_icons_about_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/icons/about.svg */ \"./src/assets/icons/about.svg\");\n/* harmony import */ var _assets_icons_projects_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/icons/projects.svg */ \"./src/assets/icons/projects.svg\");\n/* harmony import */ var _assets_icons_contact_darkblue_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/icons/contact-darkblue.svg */ \"./src/assets/icons/contact-darkblue.svg\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./App.jsx */ \"./src/App.jsx\");\n\n\n\n\n\n\n\n\n\n\n\nvar root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_9__.createRoot)(document.querySelector(\"#root\"));\nroot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default().createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_10__[\"default\"], null));\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
 
 /***/ }),
 
@@ -130,23 +130,73 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./src/assets/fr-flag.svg":
-/*!********************************!*\
-  !*** ./src/assets/fr-flag.svg ***!
-  \********************************/
+/***/ "./src/assets/icons/about.svg":
+/*!************************************!*\
+  !*** ./src/assets/icons/about.svg ***!
+  \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/fr-flag.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/fr-flag.svg?");
+eval("module.exports = __webpack_require__.p + \"assets/icons/about.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/icons/about.svg?");
 
 /***/ }),
 
-/***/ "./src/assets/uk-flag.svg":
-/*!********************************!*\
-  !*** ./src/assets/uk-flag.svg ***!
-  \********************************/
+/***/ "./src/assets/icons/contact-darkblue.svg":
+/*!***********************************************!*\
+  !*** ./src/assets/icons/contact-darkblue.svg ***!
+  \***********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"assets/uk-flag.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/uk-flag.svg?");
+eval("module.exports = __webpack_require__.p + \"assets/icons/contact-darkblue.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/icons/contact-darkblue.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/fr-flag.svg":
+/*!**************************************!*\
+  !*** ./src/assets/icons/fr-flag.svg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/icons/fr-flag.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/icons/fr-flag.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/github-white.svg":
+/*!*******************************************!*\
+  !*** ./src/assets/icons/github-white.svg ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/icons/github-white.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/icons/github-white.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/linkedin.svg":
+/*!***************************************!*\
+  !*** ./src/assets/icons/linkedin.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/icons/linkedin.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/icons/linkedin.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/projects.svg":
+/*!***************************************!*\
+  !*** ./src/assets/icons/projects.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/icons/projects.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/icons/projects.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/icons/uk-flag.svg":
+/*!**************************************!*\
+  !*** ./src/assets/icons/uk-flag.svg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/icons/uk-flag.svg\";\n\n//# sourceURL=webpack://my-webpack-project/./src/assets/icons/uk-flag.svg?");
 
 /***/ })
 

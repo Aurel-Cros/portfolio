@@ -4,7 +4,6 @@ export default function LangSelector() {
 
     function switchLang(newState) {
         setLang(newState);
-        console.log(lang);
     }
 
     return (

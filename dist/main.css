@@ -17,6 +17,8 @@ body {
   gap: 1rem;
 }
 .lang-selector img {
+  z-index: 1;
+  cursor: pointer;
   width: 2.4rem;
   height: 1.6rem;
 }
