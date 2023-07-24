@@ -7,19 +7,23 @@ import Work from '../pages/Work.jsx';
 import Contact from '../pages/Contact.jsx';
 import Project from '../pages/Project.jsx';
 import Error from '../pages/Error.jsx';
+import { LangProvider } from '../utils/context.jsx';
 
 export default function App() {
+
     return (
         <Router>
-            <NavBar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about-me" element={<About />} />
-                <Route path="/my-work" element={<Work />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/project/:project-id" element={<Project project-id={"idk"} />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
+            <LangProvider>
+                <NavBar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about-me" element={<About />} />
+                    <Route path="/my-work" element={<Work />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/project/:project-id" element={<Project project-id={"idk"} />} />
+                    <Route path="*" element={<Error />} />
+                </Routes>
+            </LangProvider>
         </Router>
     )
 }

@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useContext } from 'react';
+import { LangContext } from '../utils/context.jsx';
+
 export default function LangSelector() {
-    const [lang, setLang] = useState('fr');
+    const { lang, setLang } = useContext(LangContext);
 
     function switchLang(newState) {
         setLang(newState);
