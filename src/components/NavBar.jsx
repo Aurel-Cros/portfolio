@@ -1,4 +1,5 @@
 import LangSelector from './LangSelector.jsx';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     return (
@@ -17,9 +18,9 @@ export default function NavBar() {
                     </div>
                 </div>
                 <div className="navLinks">
-                    <a href="#" className="nav about">About me</a>
-                    <a href="#" className="nav work">My work</a>
-                    <a href="#" className="nav contact">Get in touch</a>
+                    <Link to="/about-me" className="nav about">About me</Link>
+                    <Link to="/my-work" className="nav work">My work</Link>
+                    <Link to="/contact" className="nav contact">Get in touch</Link>
                 </div>
             </div>
             <button className="navSwitch" onClick={() => { document.querySelector('.navbar').classList.toggle('closed') }}>
