@@ -5,17 +5,21 @@ $lime: #bcf816;
 $light-blue: #3599dc;
 $dark-blue: #153243;
 $dark-blue-50: rgba(21, 50, 67, 0.5);
+
 @font-face {
 	font-family: Montserrat;
 	src: local("Montserrat"), url("./assets/fonts/Montserrat.ttf");
 }
+
 @import url("text.scss");
+
 body {
 	margin: 0;
 	background-color: #666;
 	font-family: Montserrat, serif;
 	overflow-x: hidden;
 }
+
 .navbar {
 	box-sizing: border-box;
 	width: 100%;
@@ -34,6 +38,7 @@ body {
 		}
 	}
 }
+
 .navWrapper {
 	padding: 1.5rem 1.75rem;
 	position: relative;
@@ -52,6 +57,7 @@ body {
 
 	transition: left 500ms ease-in-out;
 }
+
 .lang-selector {
 	grid-column: 1;
 	position: relative;
@@ -85,6 +91,7 @@ body {
 
 		transition: top 300ms ease-in-out;
 	}
+
 	&.en .background {
 		top: calc(100% - 2.55rem);
 	}
@@ -93,11 +100,13 @@ body {
 .socials {
 	margin-left: 4rem;
 	grid-column: 2;
+
 	p {
 		color: $white-base;
 		text-align: center;
 		margin: 0;
 	}
+
 	div {
 		width: auto;
 		margin: 0 auto;
@@ -118,6 +127,7 @@ body {
 	margin-left: 3rem;
 	justify-content: space-evenly;
 	align-items: center;
+
 	a {
 		text-align: center;
 		position: relative;
@@ -131,37 +141,34 @@ body {
 		transition: background-size 300ms ease-in-out;
 
 		padding-left: 3.5rem;
+
 		&.about {
 			background-image: url("./assets/icons/about.svg"),
-				linear-gradient(
-					to right,
+				linear-gradient(to right,
 					transparent 3.5rem,
 					$white-base 3.5rem,
-					$white-base 100%
-				);
+					$white-base 100%);
 		}
+
 		&.work {
 			background-image: url("./assets/icons/projects.svg"),
-				linear-gradient(
-					to right,
+				linear-gradient(to right,
 					transparent 3.6rem,
 					$white-base 3.6rem,
-					$white-base 100%
-				);
+					$white-base 100%);
 		}
+
 		&.contact {
 			padding: 0.5rem 1rem 0.5rem 3.5rem;
 			border-radius: 1rem;
 			color: $dark-blue;
 			background-color: $lime;
 			background-image: url("./assets/icons/contact-darkblue.svg"),
-				linear-gradient(
-					to right,
+				linear-gradient(to right,
 					transparent 3.6rem,
 					$dark-blue 3.6rem,
 					$dark-blue calc(100% - 1rem),
-					transparent calc(100% - 1rem)
-				);
+					transparent calc(100% - 1rem));
 			background-position: 0.5rem 50%, 0 calc(100% - 0.5rem);
 		}
 
@@ -183,6 +190,7 @@ body {
 	border-radius: 0.5rem;
 	position: absolute;
 	right: 1%;
+
 	span {
 		box-sizing: border-box;
 		border-radius: 2px;
@@ -196,4 +204,14 @@ body {
 		rotate: 0;
 		transition: rotate 300ms linear;
 	}
+}
+
+.back-arrow a {
+	color: transparent;
+	font-size: 0.1rem;
+	padding: 1rem;
+	background: url("./assets/icons/back-arrow.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
 }

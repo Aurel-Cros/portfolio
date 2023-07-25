@@ -175,3 +175,13 @@ body {
   rotate: 0;
   transition: rotate 300ms linear;
 }
+
+.back-arrow a {
+  color: transparent;
+  font-size: 0.1rem;
+  padding: 1rem;
+  background: url(assets/icons/back-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
