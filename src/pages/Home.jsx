@@ -3,7 +3,7 @@ import { LangContext } from '../utils/context.jsx';
 import { Link } from "react-router-dom";
 
 export default function Home() {
-    const { lang } = useContext(LangContext);
+    const { lang, setLang } = useContext(LangContext);
     const frTitle = 'Page d\'accueil';
     const enTitle = 'Home page';
 
