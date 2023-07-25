@@ -1,10 +1,12 @@
 $white-base: #f9fbf2;
 $white-base-25: rgba(250, 251, 243, 0.25);
 $white-base-10: rgba(250, 251, 243, 0.1);
+$grey-text: #373B3D;
 $lime: #bcf816;
 $light-blue: #3599dc;
 $dark-blue: #153243;
 $dark-blue-50: rgba(21, 50, 67, 0.5);
+$dark-blue-25: rgba(21, 50, 67, 0.25);
 
 @font-face {
 	font-family: Montserrat;
@@ -13,14 +15,32 @@ $dark-blue-50: rgba(21, 50, 67, 0.5);
 
 @import url("text.scss");
 
+@mixin Glassmorph-light {
+	background: rgba(255, 255, 255, 0.01);
+	backdrop-filter: blur(10px);
+}
+
+@mixin Glassmorph-heavy {
+	background: rgba(255, 255, 255, 0.01);
+	backdrop-filter: blur(150px);
+}
+
 body {
 	margin: 0;
-	background-color: #666;
 	font-family: Montserrat, serif;
+	color: $dark-blue;
 	overflow-x: hidden;
 }
 
+#root {
+	min-height: 100vh;
+	background-image: url(./assets/images/newyork-background.webp);
+	background-size: cover;
+	background-position: center bottom;
+}
+
 .navbar {
+	@include Glassmorph-light();
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
