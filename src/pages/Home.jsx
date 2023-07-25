@@ -1,23 +1,16 @@
+import { useContext } from "react";
+import { LangContext } from '../utils/context.jsx';
 import { Link } from "react-router-dom";
-import getContent from '../utils/contentManager.js';
 
 export default function Home() {
-    const content = getContent().pages.home;
+    const { lang } = useContext(LangContext);
+    const frTitle = 'Page d\'accueil';
+    const enTitle = 'Home page';
+
     return (
-        <>
-            <div className="intro-frame">
-                <div className="title-name">
-                    <div>
-                        <p>{content.Hi}</p>
-                        <h1>Aurélien Cros</h1>
-                    </div>
-                    <div>
-                        <p>{content.and_im} <span className="sub-title">{content.web_dev}</span></p>
-                    </div>
-                </div>
-                <img src="../assets/images/portrait.jpg" alt="Photo de profil" />
-            </div>
-            <Link to="/nowhere">Error test.</Link>
-        </>
+        <div>
+            <h1>{lang === 'fr' ? frTitle : enTitle}</h1>
+            <Link to="/nowhere">This should be an error.</Link>
+        </div>
     )
 }
