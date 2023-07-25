@@ -1,8 +1,9 @@
-import content from '../data/content.json';
 import { useContext } from 'react';
 import { LangContext } from './context.jsx';
+import data from '../data/content.json';
 
-export default function getContent(id) {
+export default function getContent() {
     const { lang } = useContext(LangContext);
-    return content[lang][id];
+    console.log(data);
+    return data[lang];
 }

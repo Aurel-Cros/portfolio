@@ -17,14 +17,16 @@ export default function App() {
             <LangProvider>
                 <NavBar />
                 <BackArrow />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about-me" element={<About />} />
-                    <Route path="/my-work" element={<Work />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/project/:project-id" element={<Project />} />
-                    <Route path="*" element={<Error />} />
-                </Routes>
+                <main>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about-me" element={<About />} />
+                        <Route path="/my-work" element={<Work />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/project/:project-id" element={<Project />} />
+                        <Route path="*" element={<Error />} />
+                    </Routes>
+                </main>
             </LangProvider>
         </Router>
     )

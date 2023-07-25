@@ -26,6 +26,7 @@ const config = {
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],
+    devtool: 'eval-source-map',
     module: {
         rules: [
             {

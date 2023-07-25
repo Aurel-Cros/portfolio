@@ -1,9 +1,10 @@
 import LangSelector from './LangSelector.jsx';
 import { Link } from 'react-router-dom';
-import getContent from '../utils/contentManager.js';
+import getContent from '../utils/contentManager';
 
 export default function NavBar() {
-    const content = getContent('navbar');
+    const content = getContent();
+    console.log()
     return (
         <div className="navbar">
             <div className="navWrapper">
