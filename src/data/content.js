@@ -2,9 +2,9 @@ const data = {
     en: {
         navbar: {
             find_me: "Find me",
-            About: "About me",
-            Work: "My work",
-            Contact: "Get in touch"
+            about: "About me",
+            work: "My work",
+            contact: "Get in touch"
         },
         pages: {
             home: {
@@ -34,9 +34,9 @@ const data = {
     fr: {
         navbar: {
             find_me: "Suivez-moi",
-            About: "À propos",
-            Work: "Projets",
-            Contact: "Contactez-moi"
+            about: "À propos",
+            work: "Projets",
+            contact: "Contactez-moi"
         },
         pages: {
             home: {
