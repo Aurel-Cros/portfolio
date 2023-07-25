@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import getContent from '../utils/contentManager';
 
 export default function NavBar() {
-    const content = getContent();
-    console.log()
+    const content = getContent().navbar;
     return (
         <div className="navbar">
             <div className="navWrapper">
