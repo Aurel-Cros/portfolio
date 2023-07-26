@@ -118,6 +118,8 @@ body {
 }
 
 .socials {
+	display: flex;
+	flex-direction: column;
 	margin-left: 4rem;
 	grid-column: 2;
 
@@ -135,17 +137,21 @@ body {
 		justify-content: center;
 		align-items: center;
 		gap: 0.55rem;
-		background-color: $white-base-10;
 		border-radius: 1rem;
+	}
+
+	img {
+		width: 2.5rem;
+		aspect-ratio: 1/1;
 	}
 }
 
 .navLinks {
 	grid-column: 3;
+	justify-self: end;
+	width: min(100%, 35rem);
 	display: flex;
-	width: 90%;
-	margin-left: 3rem;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 
 	a {
@@ -155,45 +161,45 @@ body {
 		color: $white-base;
 
 		background-position: 0.5rem 50%, 0 100%;
-		background-size: 2rem 2rem, 0% 2px;
+		background-size: 1.5rem 1.5rem, 0% 2px;
 		background-repeat: no-repeat;
 
 		transition: background-size 300ms ease-in-out;
 
-		padding-left: 3.5rem;
+		padding-left: 2.5rem;
 
 		&.about {
 			background-image: url("./assets/icons/about.svg"),
 				linear-gradient(to right,
-					transparent 3.5rem,
-					$white-base 3.5rem,
+					transparent 2.55rem,
+					$white-base 2.55rem,
 					$white-base 100%);
 		}
 
 		&.work {
 			background-image: url("./assets/icons/projects.svg"),
 				linear-gradient(to right,
-					transparent 3.6rem,
-					$white-base 3.6rem,
+					transparent 2.55rem,
+					$white-base 2.55rem,
 					$white-base 100%);
 		}
 
 		&.contact {
-			padding: 0.5rem 1rem 0.5rem 3.5rem;
+			padding: 0.5rem 1rem 0.5rem 2.5rem;
 			border-radius: 1rem;
 			color: $dark-blue;
 			background-color: $lime;
 			background-image: url("./assets/icons/contact-darkblue.svg"),
 				linear-gradient(to right,
-					transparent 3.6rem,
-					$dark-blue 3.6rem,
+					transparent 2.66rem,
+					$dark-blue 2.66rem,
 					$dark-blue calc(100% - 1rem),
 					transparent calc(100% - 1rem));
 			background-position: 0.5rem 50%, 0 calc(100% - 0.5rem);
 		}
 
 		&:hover {
-			background-size: 2rem 2rem, 100% 2px;
+			background-size: 1.5rem 1.5rem, 100% 2px;
 		}
 	}
 }
@@ -205,8 +211,9 @@ body {
 	border: none;
 	background-color: $light-blue;
 	cursor: pointer;
-	width: 3.3rem;
-	height: 3.3rem;
+	width: 2.3rem;
+	height: 2.3rem;
+	border: 1px solid $dark-blue-50;
 	border-radius: 0.5rem;
 	position: absolute;
 	right: 1%;
@@ -215,7 +222,7 @@ body {
 		box-sizing: border-box;
 		border-radius: 2px;
 		width: 60%;
-		height: 4px;
+		height: 0.2rem;
 		background-color: $white-base;
 		position: absolute;
 		top: calc(50% - 2px);
