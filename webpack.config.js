@@ -30,6 +30,10 @@ const config = {
         rules: [
             {
                 test: /\.(js|jsx)$/i,
+                exclude: /node_modules/,
+                resolve: {
+                    extensions: [".js", ".jsx"]
+                },
                 loader: 'babel-loader',
             },
             {
