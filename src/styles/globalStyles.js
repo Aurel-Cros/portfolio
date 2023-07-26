@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import * as mixins from './mixins';
 import colors from './colors';
 import backgroundImage from '../assets/images/newyork-background.webp';
 
@@ -15,6 +16,17 @@ body {
 	background-image: url(${backgroundImage});
 	background-size: cover;
 	background-position: center bottom;
+}
+h1 {
+    font-family: Montserrat;
+    font-size: 3.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-variant: small-caps; 
+}
+h2 {
+    ${mixins.text.subtitle}
 }
 `
 
