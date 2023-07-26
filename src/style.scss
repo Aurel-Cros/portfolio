@@ -143,6 +143,16 @@ body {
 	img {
 		width: 2.5rem;
 		aspect-ratio: 1/1;
+		transition: all 200ms ease-in-out;
+		margin: 0;
+		scale: 1;
+		filter: drop-shadow(8px 8px 0px transparent);
+
+		&:hover {
+			filter: drop-shadow(4px 4px 8px $grey-text);
+			scale: 1.06;
+			rotate: 15deg;
+		}
 	}
 }
 
