@@ -5,7 +5,10 @@ import './assets/icons/linkedin.svg';
 import './assets/icons/about.svg';
 import './assets/icons/projects.svg';
 import './assets/icons/contact-darkblue.svg';
+
 import './style.scss';
+import FontStyles from './styles/globalFonts';
+import GlobalStyles from './styles/globalStyles';
 
 import { createRoot } from 'react-dom/client';
 import App from './components/App';
@@ -13,5 +16,9 @@ import App from './components/App';
 const root = createRoot(document.querySelector("#root"));
 
 root.render(
-   <App />
+   <>
+      <FontStyles />
+      <GlobalStyles />
+      <App />
+   </>
 );

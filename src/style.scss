@@ -8,13 +8,6 @@ $dark-blue: #153243;
 $dark-blue-50: rgba(21, 50, 67, 0.5);
 $dark-blue-25: rgba(21, 50, 67, 0.25);
 
-@font-face {
-	font-family: Montserrat;
-	src: local("Montserrat"), url("./assets/fonts/Montserrat.ttf");
-}
-
-@import url("text.scss");
-
 @mixin Glassmorph-light {
 	background: rgba(255, 255, 255, 0.01);
 	backdrop-filter: blur(10px);
@@ -23,40 +16,6 @@ $dark-blue-25: rgba(21, 50, 67, 0.25);
 @mixin Glassmorph-heavy {
 	background: rgba(255, 255, 255, 0.01);
 	backdrop-filter: blur(150px);
-}
-
-body {
-	margin: 0;
-	font-family: Montserrat, serif;
-	color: $dark-blue;
-	overflow-x: hidden;
-}
-
-#root {
-	min-height: 100vh;
-	background-image: url(./assets/images/newyork-background.webp);
-	background-size: cover;
-	background-position: center bottom;
-}
-
-.navbar {
-	@include Glassmorph-light();
-	box-sizing: border-box;
-	width: 100%;
-	height: auto;
-	display: grid;
-	grid-template-columns: 1fr auto;
-	place-items: center;
-
-	&.closed {
-		.navWrapper {
-			left: 100vw;
-		}
-
-		.navSwitch :first-child {
-			rotate: 90deg;
-		}
-	}
 }
 
 .navWrapper {

@@ -1,11 +1,46 @@
+import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { glassmorph } from '../styles/mixins';
+
 import LangSelector from './LangSelector';
 import getContent from '../utils/contentManager';
 
+const NavDiv = styled.div`
+	${glassmorph.light}
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	place-items: center;
+    
+	&.closed {
+		.navWrapper {
+			left: 100vw;
+		}
+		.navSwitch :first-child {
+			rotate: 90deg;
+		}
+	}
+
+`
+
+const NavLink = styled(Link)`
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-variant: all-small-caps;
+`
+
 export default function NavBar() {
+    const [isOpen, setOpen] = useState(true);
+
     const content = getContent().navbar;
     return (
-        <div className="navbar">
+        <NavDiv className={isOpen ? '' : 'closed'} >
             <div className="navWrapper">
                 <LangSelector />
                 <div className="socials">
@@ -20,15 +55,15 @@ export default function NavBar() {
                     </div>
                 </div>
                 <div className="navLinks">
-                    <Link to="/about-me" className="nav about">{content.about}</Link>
-                    <Link to="/my-work" className="nav work">{content.work}</Link>
-                    <Link to="/contact" className="nav contact">{content.contact}</Link>
+                    <NavLink to="/about-me" className="nav about">{content.about}</NavLink>
+                    <NavLink to="/my-work" className="nav work">{content.work}</NavLink>
+                    <NavLink to="/contact" className="nav contact">{content.contact}</NavLink>
                 </div>
             </div>
-            <button className="navSwitch" onClick={() => { document.querySelector('.navbar').classList.toggle('closed') }}>
+            <button className="navSwitch" onClick={() => { setOpen(!isOpen) }}>
                 <span></span>
                 <span></span>
             </button>
-        </div>
+        </NavDiv>
     )
 }
