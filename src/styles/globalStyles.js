@@ -17,6 +17,14 @@ body {
 	background-size: cover;
 	background-position: center bottom;
 }
+
+main {
+    position: relative;
+    width: min(75rem, 95vw);
+    margin: 1.4rem auto;
+    display: flex;
+    justify-content: center;
+}
 h1 {
     font-family: Montserrat;
     font-size: 3.3rem;

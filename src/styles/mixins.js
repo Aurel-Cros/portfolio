@@ -16,15 +16,17 @@ export const glassmorph = {
 export const text = {
     nav: `
     font-size: 1.25rem;
-	font-style: normal;
 	font-weight: 500;
-	line-height: normal;
 	font-variant: all-small-caps;`,
     subtitle: `
     font-size: 1.25rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     font-variant: small-caps;
+    `
+}
+
+export const blocks = {
+    bdradius: `
+    border-radius: 1.25rem;
     `
 }
