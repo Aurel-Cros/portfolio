@@ -18,8 +18,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "version": "1.0.0",
-  "description": "My webpack project",
-  "name": "my-webpack-project",
+  "description": "Web Developer Portfolio : Aurélien Cros",
+  "name": "aurel-cros-portfolio",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
