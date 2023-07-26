@@ -15,7 +15,7 @@ const NavDiv = styled.div`
 	display: grid;
 	grid-template-columns: 1fr auto;
 	place-items: center;
-    
+
 	&.closed {
 		.navWrapper {
 			left: 100vw;
@@ -43,6 +43,7 @@ export default function NavBar() {
         <NavDiv className={isOpen ? '' : 'closed'} >
             <div className="navWrapper">
                 <LangSelector />
+
                 <div className="socials">
                     <p className="nav">{content.find_me}</p>
                     <div>
@@ -54,12 +55,15 @@ export default function NavBar() {
                         </a>
                     </div>
                 </div>
+
                 <div className="navLinks">
                     <NavLink to="/about-me" className="nav about">{content.about}</NavLink>
                     <NavLink to="/my-work" className="nav work">{content.work}</NavLink>
                     <NavLink to="/contact" className="nav contact">{content.contact}</NavLink>
                 </div>
+
             </div>
+
             <button className="navSwitch" onClick={() => { setOpen(!isOpen) }}>
                 <span></span>
                 <span></span>
