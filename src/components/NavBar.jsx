@@ -25,7 +25,7 @@ const NavWrapper = styled.div`
 	padding: 1.5rem 1.75rem;
 	position: relative;
 	z-index: 0;
-	left: ${props => (props.isOpen ? 0 : 100)}vw;
+	left: ${({ $isOpen }) => ($isOpen ? 0 : 100)}vw;
 	top: 0;
 	width: 100%;
 	box-sizing: border-box;
@@ -164,7 +164,7 @@ const NavSwitch = styled.button`
 		transition: rotate 300ms linear;
 
 		&:first-child {
-			rotate: ${props => props.isOpen ? 0 : 90}deg;
+			rotate: ${({ $isOpen }) => $isOpen ? 0 : 90}deg;
 		}
 	}
 `
@@ -175,7 +175,7 @@ export default function NavBar() {
 	const content = getContent().navbar;
 	return (
 		<NavDiv>
-			<NavWrapper isOpen={isOpen}>
+			<NavWrapper $isOpen={isOpen}>
 				<LangSelector />
 
 				<SocialLinks>
@@ -198,7 +198,7 @@ export default function NavBar() {
 
 			</NavWrapper>
 
-			<NavSwitch isOpen={isOpen} onClick={() => { setOpen(!isOpen) }}>
+			<NavSwitch $isOpen={isOpen} onClick={() => { setOpen(!isOpen) }}>
 				<span></span>
 				<span></span>
 			</NavSwitch>
