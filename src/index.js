@@ -8,7 +8,7 @@ import './assets/icons/contact-darkblue.svg';
 import './style.scss';
 
 import { createRoot } from 'react-dom/client';
-import App from './components/App.jsx';
+import App from './components/App';
 
 const root = createRoot(document.querySelector("#root"));
 

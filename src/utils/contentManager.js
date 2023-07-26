@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { LangContext } from './context.jsx';
-import data from '../data/content.js';
+import { LangContext } from './context';
+import data from '../data/content';
 
 export default function getContent() {
     const { lang } = useContext(LangContext);

@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import NavBar from './NavBar.jsx';
-import BackArrow from './BackArrow.jsx';
-import Home from '../pages/Home.jsx';
-import About from '../pages/About.jsx';
-import Work from '../pages/Work.jsx';
-import Contact from '../pages/Contact.jsx';
-import Project from '../pages/Project.jsx';
-import Error from '../pages/Error.jsx';
-import { LangProvider } from '../utils/context.jsx';
+import NavBar from './NavBar';
+import BackArrow from './BackArrow';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Work from '../pages/Work';
+import Contact from '../pages/Contact';
+import Project from '../pages/Project';
+import Error from '../pages/Error';
+import { LangProvider } from '../utils/context';
 
 export default function App() {
 
