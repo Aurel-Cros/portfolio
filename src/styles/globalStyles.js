@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
 body {
     margin: 0;
     font-family: Montserrat, serif;
-    color: ${colors.darkBlue};
+    color: ${colors.greyText};
     overflow-x: hidden;
 }
 
@@ -31,10 +31,13 @@ h1 {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    font-variant: small-caps; 
+    font-variant: small-caps;
+
+    color: ${colors.darkBlue};
 }
 h2 {
     ${mixins.text.subtitle}
+    color: ${colors.darkBlue};
 }
 `
 
