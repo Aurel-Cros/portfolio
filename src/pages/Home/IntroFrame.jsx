@@ -1,3 +1,4 @@
+import Button from "../../components/Button";
 import getContent from "../../utils/contentManager";
 
 import styled from 'styled-components';
@@ -64,6 +65,13 @@ const IntroLongText = styled.p`
     padding: 1rem;
 `
 
+const AboutButton = styled(Button)`
+    padding: 0.25rem 2.3rem;
+    grid-column: 3/4;
+    grid-row: 4;
+    place-self: start end;
+`
+
 export default function IntroFrame() {
     const content = getContent().pages.home;
     return (
@@ -74,6 +82,7 @@ export default function IntroFrame() {
             <SubTitle>{content.web_dev}</SubTitle>
             <ProfilePic src={portrait} />
             <IntroLongText>{content.intro_long_text}</IntroLongText>
+            <AboutButton to="/about-me">More about me</AboutButton>
         </IntroFrameElement>
     )
 }
