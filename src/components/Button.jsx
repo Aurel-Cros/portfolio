@@ -8,7 +8,7 @@ const StyledButton = styled(Link)`
     color: ${colors.whiteBase};
     text-align: center;
 
-    background: linear-gradient(to left, ${colors.lightBlue} 50%, ${colors.lime});
+    background: linear-gradient(to left, ${colors.lightBlue} 65%, ${colors.lime} 120%);
     background-size: 200% 100%;
     background-position: 100% 0;
     border: none;

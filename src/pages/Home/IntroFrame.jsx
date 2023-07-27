@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import getContent from "../../utils/contentManager";
 
 import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
+
+import { icons } from "../../components/Icons";
 
 import portrait from '../../assets/images/portrait.webp';
 
@@ -65,6 +68,25 @@ const IntroLongText = styled.p`
     padding: 1rem;
 `
 
+const TechStack = styled.div`
+    grid-row: 4;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+
+    p:first-child {
+        ${mixins.text.subtitle}
+        margin-top: 0;
+    }
+    p:last-child {
+        align-self: end;
+    }
+    div {
+        display: flex;
+        gap: 0.5rem;
+    }
+`
+
 const AboutButton = styled(Button)`
     padding: 0.25rem 2.3rem;
     grid-column: 3/4;
@@ -72,8 +94,20 @@ const AboutButton = styled(Button)`
     place-self: start end;
 `
 
+const CvButton = styled.a`
+    grid-column: 1 / 3;
+    grid-row: -2;
+    padding: 1rem 2rem;
+    background-image: url(${icons.all.cv});
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+`
+
 export default function IntroFrame() {
     const content = getContent().pages.home;
+    const mainIcons = Object.entries(icons.mainTech);
+
     return (
         <IntroFrameElement>
             <IntroShortText>{content.Hi}</IntroShortText>
@@ -82,7 +116,19 @@ export default function IntroFrame() {
             <SubTitle>{content.web_dev}</SubTitle>
             <ProfilePic src={portrait} />
             <IntroLongText>{content.intro_long_text}</IntroLongText>
-            <AboutButton to="/about-me">More about me</AboutButton>
+            <TechStack>
+                <p>{content.I_use}</p>
+                <div>
+                    {mainIcons.map(entry => {
+                        const icon = entry.splice(',');
+                        return <img src={icon[1]} key={icon[0]} />
+                    })}
+                </div>
+                <p>{content.and_more}</p>
+            </TechStack>
+            <CvButton href="./cv.pdf" target="_blank">{content.CV}</CvButton>
+            <AboutButton to="/about-me">{content.know_more}</AboutButton>
+
         </IntroFrameElement>
     )
 }

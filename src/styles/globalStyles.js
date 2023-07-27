@@ -39,6 +39,10 @@ h2 {
     ${mixins.text.subtitle}
     color: ${colors.darkBlue};
 }
+a {
+    text-decoration: none;
+    color: ${colors.greyText};
+}
 `
 
 export default GlobalStyles;
