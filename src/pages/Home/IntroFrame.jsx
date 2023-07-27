@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import getContent from "../../utils/contentManager";
 
@@ -15,7 +14,7 @@ const IntroFrameElement = styled.div`
     width: 100%;
     display: grid;
     padding: 1rem;
-    row-gap: 1rem;
+    row-gap: 0.5rem;
     grid-template-columns: 1fr 4fr 20rem auto;
     grid-template-rows: 20% 2rem auto 2fr auto;
     place-items: start;
@@ -34,7 +33,7 @@ const IntroShortText = styled.p`
         line-height: 80%;
         grid-column: 1/3;
         justify-self: end;
-        margin-right: 1.8rem;
+        margin-right: 1.5rem;
 `
 
 const SubTitle = styled.div`
@@ -87,7 +86,13 @@ const TechStack = styled.div`
     }
     div {
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 0.5rem;
+    }
+    img {
+        max-width: 3rem;
+        max-height: 2rem;
     }
 `
 
@@ -99,7 +104,7 @@ const AboutButton = styled(Button)`
 `
 
 const CvButton = styled.a`
-    grid-column: 1 / 3;
+    grid-column: 1 / -1;
     grid-row: -2;
     padding: 0.1rem 2rem;
     background-image: url(${icons.all.cv});

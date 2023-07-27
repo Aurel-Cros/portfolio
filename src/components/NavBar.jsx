@@ -42,7 +42,7 @@ const NavWrapper = styled.div`
 const SocialLinks = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-left: 4rem;
+	margin: 0 1rem;
 	grid-column: 2;
 
 	p {

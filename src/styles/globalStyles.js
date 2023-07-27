@@ -43,6 +43,12 @@ a {
     text-decoration: none;
     color: ${colors.greyText};
 }
+
+@media screen and (max-width: 820px){
+    :root {
+        font-size: 12px;
+    }
+}
 `
 
 export default GlobalStyles;
