@@ -17,7 +17,7 @@ const IntroFrameElement = styled.div`
     padding: 1rem;
     row-gap: 1rem;
     grid-template-columns: 1fr 4fr 20rem auto;
-    grid-template-rows: 20% 2rem auto 2fr 1fr;
+    grid-template-rows: 20% 2rem auto 2fr auto;
     place-items: start;
     
     h1 {
@@ -74,12 +74,16 @@ const TechStack = styled.div`
     display: flex;
     flex-direction: column;
 
-    p:first-child {
+    p {
+
+        &:first-child {
         ${mixins.text.subtitle}
         margin-top: 0;
-    }
-    p:last-child {
+        }
+        &:last-child {
         align-self: end;
+        margin-bottom: 0;
+        }
     }
     div {
         display: flex;
@@ -97,7 +101,7 @@ const AboutButton = styled(Button)`
 const CvButton = styled.a`
     grid-column: 1 / 3;
     grid-row: -2;
-    padding: 1rem 2rem;
+    padding: 0.1rem 2rem;
     background-image: url(${icons.all.cv});
     background-size: 1.5rem 1.5rem;
     background-repeat: no-repeat;
