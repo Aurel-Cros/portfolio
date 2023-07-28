@@ -13,6 +13,8 @@ export default function getProjects() {
             image: project.image,
             text: project.text[lang]
         }
+        if (project.demoLink)
+            projectWithLang.demoLink = project.demoLink;
         list.push(projectWithLang);
     })
 

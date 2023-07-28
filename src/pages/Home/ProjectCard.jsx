@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
 import colors from '../../styles/colors';
 
+import getContent from '../../utils/getContent';
+import Button from "../../components/Button";
 import { icons } from "../../components/Icons";
 
 const StyledProjectCard = styled.div`
@@ -16,11 +18,21 @@ const StyledProjectCard = styled.div`
     gap: 1rem;
 `
 const ColumnLeft = styled.div`
+    grid-column: 1;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+`
+const ColumnRight = styled.div`
+    grid-column:2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
 `
 const TechStack = styled.div`
     border-radius: 0.68966rem;
@@ -56,8 +68,27 @@ const ProjectDate = styled.p`
     background-size: 1.2rem;
     background-position: 0 50%;
 `
+const ProjectLinks = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+`
+const DemoLink = styled.a`
+    padding: 0.5% 2rem;
+    background-image: url(${icons.all.popout});
+    background-size: 1.5rem;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    &.inactive {
+        filter: grayscale(100%) contrast(10%);
+        cursor: default;
+    }
+`
 
 export default function ProjectCard({ $data }) {
+    const content = getContent().pages.home;
+    console.log($data)
     return (
         <>
             <StyledProjectCard>
@@ -76,6 +107,13 @@ export default function ProjectCard({ $data }) {
                     </TechStack>
                     <ProjectDate>{$data.text.date}</ProjectDate>
                 </ColumnLeft>
+                <ColumnRight>
+                    <p>{$data.text.shortText}</p>
+                    <ProjectLinks>
+                        <DemoLink href={$data.demoLink} className={$data.demoLink ? null : 'inactive'}>Live demo</DemoLink>
+                        <Button>{content.More_details}</Button>
+                    </ProjectLinks>
+                </ColumnRight>
             </StyledProjectCard>
         </>
     )

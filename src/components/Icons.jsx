@@ -12,6 +12,7 @@ import iconThree from '../assets/icons/three.svg';
 
 import iconDownload from '../assets/icons/download.svg';
 import iconCal from './../assets/icons/calendar.svg';
+import iconPopout from './../assets/icons/popout.svg';
 
 export const icons = {
     technologies: {
@@ -62,6 +63,7 @@ export const icons = {
     },
     all: {
         calendar: iconCal,
-        cv: iconDownload
+        cv: iconDownload,
+        popout: iconPopout
     }
 }
