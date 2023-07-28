@@ -6,22 +6,62 @@ import iconWebpack from '../assets/icons/webpack.svg';
 import iconElectron from '../assets/icons/electron.svg';
 import iconGit from '../assets/icons/git.svg';
 import iconSass from '../assets/icons/sass.svg';
+import iconNode from '../assets/icons/nodejs.svg';
+import iconVite from '../assets/icons/vite.svg';
+import iconThree from '../assets/icons/three.svg';
 
 import iconDownload from '../assets/icons/download.svg';
-
+import iconCal from './../assets/icons/calendar.svg';
 
 export const icons = {
-    mainTech: {
-        js: iconJS,
-        php: iconPHP,
-        sql: iconSQL,
-        react: iconReact,
-        webpack: iconWebpack,
-        electron: iconElectron,
-        git: iconGit,
-        sass: iconSass
+    technologies: {
+        js: {
+            name: 'Javascript',
+            icon: iconJS
+        },
+        nodejs: {
+            name: 'Node.js',
+            icon: iconNode
+        },
+        php: {
+            name: 'PHP',
+            icon: iconPHP
+        },
+        sql: {
+            name: 'SQL',
+            icon: iconSQL
+        },
+        react: {
+            name: 'React',
+            icon: iconReact
+        },
+        webpack: {
+            name: 'Webpack',
+            icon: iconWebpack
+        },
+        electron: {
+            name: 'Electron',
+            icon: iconElectron
+        },
+        git: {
+            name: 'Git',
+            icon: iconGit
+        },
+        sass: {
+            name: 'Sass',
+            icon: iconSass
+        },
+        threejs: {
+            name: 'Three.js',
+            icon: iconThree
+        },
+        vite: {
+            name: 'Vite',
+            icon: iconVite
+        }
     },
     all: {
+        calendar: iconCal,
         cv: iconDownload
     }
 }

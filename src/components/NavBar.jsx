@@ -10,7 +10,7 @@ import iconWork from '../assets/icons/projects.svg';
 import iconContact from '../assets/icons/contact-darkblue.svg';
 
 import LangSelector from './LangSelector';
-import getContent from '../utils/contentManager';
+import getContent from '../utils/getContent';
 
 const NavDiv = styled.div`
 	${mixins.glassmorph.light}

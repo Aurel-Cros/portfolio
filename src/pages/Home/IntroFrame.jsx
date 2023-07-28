@@ -1,5 +1,5 @@
 import Button from "../../components/Button";
-import getContent from "../../utils/contentManager";
+import getContent from "../../utils/getContent";
 
 import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
@@ -8,10 +8,9 @@ import { icons } from "../../components/Icons";
 
 import portrait from '../../assets/images/portrait.webp';
 
-const IntroFrameElement = styled.div`
+const IntroFrameElement = styled.section`
     ${mixins.glassmorph.medium};
     ${mixins.blocks.bdradius};
-    width: 100%;
     display: grid;
     padding: 1rem;
     row-gap: 0.5rem;
@@ -65,6 +64,7 @@ const IntroLongText = styled.p`
     grid-column: 1 / 4;
     margin: 0;
     padding: 1rem;
+    align-self: center;
 `
 
 const TechStack = styled.div`
@@ -115,7 +115,7 @@ const CvButton = styled.a`
 
 export default function IntroFrame() {
     const content = getContent().pages.home;
-    const mainIcons = Object.entries(icons.mainTech);
+    const mainIcons = Object.entries(icons.technologies);
 
     return (
         <IntroFrameElement>
@@ -130,7 +130,7 @@ export default function IntroFrame() {
                 <div>
                     {mainIcons.map(entry => {
                         const icon = entry.splice(',');
-                        return <img src={icon[1]} key={icon[0]} />
+                        return <img src={icon[1].icon} key={icon[0]} alt={icon[1].name} title={icon[1].name} />
                     })}
                 </div>
                 <p>{content.and_more}</p>

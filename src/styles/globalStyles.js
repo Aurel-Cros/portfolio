@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import * as mixins from './mixins';
 import colors from './colors';
-import backgroundImage from '../assets/images/newyork-background.webp';
+import backgroundImage from '../assets/images/newyork-background-pp.webp';
 
 const GlobalStyles = createGlobalStyle`
 body {
@@ -16,13 +16,16 @@ body {
 	background-image: url(${backgroundImage});
 	background-size: cover;
 	background-position: center bottom;
+    padding-bottom: 2rem;
 }
 
 main {
     position: relative;
     width: min(75rem, 95vw);
-    margin: 1.4rem auto;
+    margin: 1.4rem auto 0;
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
     justify-content: center;
 }
 h1 {
@@ -36,8 +39,13 @@ h1 {
     color: ${colors.darkBlue};
 }
 h2 {
-    ${mixins.text.subtitle}
     color: ${colors.darkBlue};
+
+    font-family: Montserrat;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-variant: all-small-caps;
+    letter-spacing: 0.14rem;
 }
 a {
     text-decoration: none;

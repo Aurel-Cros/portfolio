@@ -22,7 +22,12 @@ export const text = {
     font-size: 1.25rem;
     font-weight: 400;
     font-variant: small-caps;
-    `
+    `,
+    subtext: `
+    font-family: Montserrat;
+    font-size: 0.68966rem;
+    font-weight: 500;
+    letter-spacing: -0.0069rem;`
 }
 
 export const blocks = {

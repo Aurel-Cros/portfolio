@@ -1,4 +1,4 @@
-import getContent from "../../utils/contentManager";
+import getContent from "../../utils/getContent";
 import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
 
