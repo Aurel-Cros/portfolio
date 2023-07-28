@@ -9,7 +9,7 @@ import { icons } from "../../components/Icons";
 import portrait from '../../assets/images/portrait.webp';
 
 const IntroFrameElement = styled.section`
-    ${mixins.glassmorph.medium};
+    ${mixins.glassmorph.light};
     ${mixins.blocks.bdradius};
     display: grid;
     padding: 1rem;

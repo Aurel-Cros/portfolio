@@ -9,7 +9,7 @@ import { icons } from "../../components/Icons";
 const StyledProjectCard = styled.div`
     width: 45%;
     ${mixins.blocks.bdradius}
-    ${mixins.glassmorph.medium}
+    ${mixins.glassmorph.light}
     padding: 0.9rem;
     display: grid;
     grid-template-columns: 25% 1fr;
