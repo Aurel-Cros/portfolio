@@ -68,15 +68,17 @@ const ProjectDate = styled.p`
     background-position: 0 50%;
 `
 const ProjectLinks = styled.div`
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    padding-bottom: 1.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.25rem;
+    padding-bottom: 1rem;
 `
 const DemoLink = styled.a`
-    padding: 0 0 0 2rem;
+    padding: 0.5rem 0 0.5rem 1.5rem;
     background-image: url(${icons.all.popout});
-    background-size: 1.5rem;
+    background-size: 1.25rem;
     background-position: 0 50%;
     background-repeat: no-repeat;
     &.inactive {
