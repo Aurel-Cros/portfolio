@@ -7,7 +7,6 @@ import Button from "../../components/Button";
 import { icons } from "../../components/Icons";
 
 const StyledProjectCard = styled.div`
-    width: 45%;
     ${mixins.blocks.bdradius}
     ${mixins.glassmorph.light}
     padding: 0.9rem;
@@ -71,11 +70,11 @@ const ProjectDate = styled.p`
 const ProjectLinks = styled.div`
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 0.75rem;
     padding-bottom: 1.5rem;
 `
 const DemoLink = styled.a`
-    padding: 0.5% 2rem;
+    padding: 0 0 0 2rem;
     background-image: url(${icons.all.popout});
     background-size: 1.5rem;
     background-position: 0 50%;
@@ -88,7 +87,6 @@ const DemoLink = styled.a`
 
 export default function ProjectCard({ $data }) {
     const content = getContent().pages.home;
-    console.log($data)
     return (
         <>
             <StyledProjectCard>
@@ -105,12 +103,12 @@ export default function ProjectCard({ $data }) {
                             })
                         }
                     </TechStack>
-                    <ProjectDate>{$data.text.date}</ProjectDate>
+                    <ProjectDate>{$data.currentLangText.date}</ProjectDate>
                 </ColumnLeft>
                 <ColumnRight>
-                    <p>{$data.text.shortText}</p>
+                    <p>{$data.currentLangText.shortText}</p>
                     <ProjectLinks>
-                        <DemoLink href={$data.demoLink} className={$data.demoLink ? null : 'inactive'}>Live demo</DemoLink>
+                        <DemoLink href={$data.demoLink} target="_blank" className={$data.demoLink ? null : 'inactive'}>Live demo</DemoLink>
                         <Button>{content.More_details}</Button>
                     </ProjectLinks>
                 </ColumnRight>

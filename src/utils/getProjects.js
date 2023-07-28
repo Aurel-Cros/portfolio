@@ -3,20 +3,11 @@ import { LangContext } from './context';
 import projects from '../data/projects';
 
 export default function getProjects() {
-    const list = [];
     const { lang } = useContext(LangContext);
 
-    projects.forEach(project => {
-        const projectWithLang = {
-            name: project.name,
-            techs: project.techs,
-            image: project.image,
-            text: project.text[lang]
-        }
-        if (project.demoLink)
-            projectWithLang.demoLink = project.demoLink;
-        list.push(projectWithLang);
+    projects.forEach((project, index, array) => {
+        array[index].currentLangText = project.text[lang];
     })
 
-    return list;
+    return projects;
 }

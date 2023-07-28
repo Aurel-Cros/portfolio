@@ -13,7 +13,7 @@ const StyledButton = styled(Link)`
     background-position: 100% 0;
     border: none;
     border-radius: 1.25rem;
-    padding: 0.25rem 1.6rem;
+    padding: 0.25rem 1rem;
 
     font-family: Montserrat;
     font-size: 0.7rem;

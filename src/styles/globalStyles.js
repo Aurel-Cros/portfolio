@@ -51,7 +51,9 @@ a {
     text-decoration: none;
     color: ${colors.greyText};
 }
-
+button {
+    font-family: Montserrat;
+}
 @media screen and (max-width: 820px){
     :root {
         font-size: 12px;
