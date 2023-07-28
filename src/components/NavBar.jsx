@@ -13,7 +13,6 @@ import LangSelector from './LangSelector';
 import getContent from '../utils/getContent';
 
 const NavDiv = styled.div`
-	${mixins.glassmorph.light}
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
@@ -22,6 +21,7 @@ const NavDiv = styled.div`
 	place-items: center;
 `
 const NavWrapper = styled.div`
+	${mixins.glassmorph.medium}
 	padding: 1.5rem 1.75rem;
 	position: relative;
 	z-index: 0;
