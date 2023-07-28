@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-family: Montserrat, serif;
     color: ${colors.greyText};
+    font-size: 0.85rem;
     overflow-x: hidden;
 }
 
