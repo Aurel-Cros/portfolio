@@ -12,7 +12,7 @@ const StyledProjectCard = styled.div`
     padding: 0.9rem;
     display: grid;
     grid-template-columns: 25% 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr auto;
     place-items: center;
     gap: 1rem;
 `
@@ -60,23 +60,26 @@ const ProjectBadge = styled.img`
 
 const ProjectDate = styled.p`
     ${mixins.text.subtext}
+    grid-column: 1;
+    grid-row: 2;
     margin: 0;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0rem 1rem 1.5rem;
     background-image: url(${icons.all.calendar});
     background-repeat: no-repeat;
     background-size: 1.2rem;
     background-position: 0 50%;
 `
 const ProjectLinks = styled.div`
-    width: 100%;
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 0.25rem;
-    padding-bottom: 1rem;
+    gap: 1.25rem;
 `
 const DemoLink = styled.a`
-    padding: 0.5rem 0 0.5rem 1.5rem;
+    padding-left :1.5rem;
     background-image: url(${icons.all.popout});
     background-size: 1.25rem;
     background-position: 0 50%;
@@ -86,7 +89,6 @@ const DemoLink = styled.a`
         cursor: default;
     }
 `
-
 export default function ProjectCard({ $data }) {
     const content = getContent().pages.home;
     return (
@@ -105,15 +107,15 @@ export default function ProjectCard({ $data }) {
                             })
                         }
                     </TechStack>
-                    <ProjectDate>{$data.currentLangText.date}</ProjectDate>
                 </ColumnLeft>
                 <ColumnRight>
                     <p>{$data.currentLangText.shortText}</p>
-                    <ProjectLinks>
-                        <DemoLink href={$data.demoLink} target="_blank" className={$data.demoLink ? null : 'inactive'}>Live demo</DemoLink>
-                        <Button>{content.More_details}</Button>
-                    </ProjectLinks>
                 </ColumnRight>
+                <ProjectDate>{$data.currentLangText.date}</ProjectDate>
+                <ProjectLinks>
+                    <DemoLink href={$data.demoLink} target="_blank" className={$data.demoLink ? null : 'inactive'}>Live demo</DemoLink>
+                    <Button>{content.More_details}</Button>
+                </ProjectLinks>
             </StyledProjectCard>
         </>
     )
