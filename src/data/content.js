@@ -28,7 +28,8 @@ const data = {
             }
         },
         error: {
-            e404: "Oops ! 🙈 There's nothing here !"
+            e404: "Oops ! 🙈 There's nothing here !",
+            tel_format: "Numbers separated by spaces or hyphens, with or without the country code starting with +"
         }
     },
     fr: {
@@ -60,7 +61,8 @@ const data = {
             }
         },
         error: {
-            e404: "Oups ! 🙈 Cette page n'existe pas !"
+            e404: "Oups ! 🙈 Cette page n'existe pas !",
+            tel_format: "Nombres uniquement, séparés par des espaces ou des tirets, précédés ou non du code pays démarrant avec +"
         }
     }
 }
