@@ -14,18 +14,15 @@ const ContactSection = styled.div`
     align-items: center;
     gap: 1rem;
 `
-
-const SectionTitle = styled.h2`
-    margin-left: 3.2rem;
-`
 const inputFont = `
     font-family: Montserrat;
     font-size: 0.825rem;
     color: ${colors.greyText}7F;
     letter-spacing: 0.05rem;
 `
-
 const StyledInput = styled.input`
+    appearance: none;
+    -moz-appearance: textfield;
     ${mixins.glassmorph.heavy}
     ${inputFont}
     background: rgba(249, 251, 242, 0.5);
@@ -44,7 +41,6 @@ const StyledTextA = styled.textarea`
     width: 21rem;
     min-height: 8rem;
 `
-
 const SendBtn = styled.button`
     ${mixins.text.nav}
     cursor: pointer;
@@ -62,26 +58,65 @@ const SendBtn = styled.button`
     letter-spacing: -0.007rem;
     text-decoration: none;
 
-    transition: background-position 500ms ease-in-out;
+    transition: background-position 400ms ease-in-out;
     &:hover {
         background-position:  0.5rem 50%, 0 0;
     }
     &:active {
-        scale: 0.98;
+        scale: 0.975;
         box-shadow: inset 1px 1px 4px ${colors.greyText};
     }
 `
+function sendMessage(formData) {
+    console.log("VALIDATE AND SEND : ", formData);
+    // Validate and send
+}
 
 export default function ContactFrame() {
+    const [form, setForm] = useState(null);
+    console.log(form);
     const content = getContent().pages.home;
+    const errors = getContent().error;
     return (
         <ContactSection>
-            <SectionTitle>Contact me</SectionTitle>
-            <StyledInput type="text" placeholder={content.contact_name} />
-            <StyledInput type="text" placeholder={content.contact_mail} />
-            <StyledInput type="text" placeholder={content.contact_phone} />
-            <StyledTextA placeholder={content.contact_message} />
-            <SendBtn>{content.contact_send} </SendBtn>
-        </ContactSection>
+            <h2>{content.Contact}</h2>
+            <form id="contact-form">
+                <ContactSection>
+                    <StyledInput type="text" placeholder={content.contact_name} onBlur={(e) => {
+                        e.target.reportValidity();
+                        if (e.target.checkValidity())
+                            setForm({ ...form, name: e.target.value })
+                    }} required />
+
+                    <StyledInput type="email" placeholder={content.contact_mail} onBlur={(e) => {
+                        e.target.reportValidity();
+                        if (e.target.checkValidity())
+                            setForm({ ...form, mail: e.target.value })
+                    }} pattern="^([a-zA-Z0-9]+([\-\/#!%$'&+*=?^_.\{\|\}~]*[a-zA-Z0-9]+)*){1,63}@([a-zA-Z0-9]+([.\-][a-zA-Z0-9]+)*){1,63}\.[a-z]{2,63}$" title="email-example@domain.extension"
+                        required />
+
+                    <StyledInput type="tel" placeholder={content.contact_phone} onBlur={(e) => {
+                        e.target.reportValidity();
+                        if (e.target.checkValidity())
+                            setForm({ ...form, phone: e.target.value })
+                    }} pattern="^(\+|00)?[0-9 \-.]{7,16}$" required title={errors.tel_format} />
+
+                    <StyledTextA minLength="80" placeholder={content.contact_message} onBlur={(e) => {
+                        e.target.reportValidity();
+                        if (e.target.checkValidity())
+                            setForm({ ...form, message: e.target.value })
+                    }} required />
+
+                    <SendBtn onClick={(e) => {
+                        e.preventDefault();
+                        const contactForm = document.querySelector("#contact-form");
+                        contactForm.reportValidity();
+                        if (contactForm.checkValidity())
+                            sendMessage(form);
+                    }
+                    }>{content.contact_send} </SendBtn>
+                </ContactSection>
+            </form >
+        </ContactSection >
     )
 }
