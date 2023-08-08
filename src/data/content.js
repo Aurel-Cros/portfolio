@@ -29,7 +29,7 @@ const data = {
         },
         error: {
             e404: "Oops ! 🙈 There's nothing here !",
-            tel_format: "Numbers separated by spaces or hyphens, with or without the country code starting with +"
+            tel_format: "Numbers separated by spaces or hyphens, with or without the country code starting with + in front"
         }
     },
     fr: {
