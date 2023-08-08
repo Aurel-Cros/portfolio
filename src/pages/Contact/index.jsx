@@ -1,8 +1,7 @@
+import ContactFrame from "../../components/ContactFrame";
 export default function Contact() {
 
     return (
-        <div>
-            <h1>Page Contact</h1>
-        </div>
+        <ContactFrame></ContactFrame>
     )
 }

@@ -1,12 +1,10 @@
 import { useState } from "react";
-import Button from "../../components/Button";
-import getContent from "../../utils/getContent";
+import getContent from "../utils/getContent";
 
 import styled from 'styled-components';
-import * as mixins from '../../styles/mixins';
-import iconSend from '../../assets/icons/contact-lime.svg';
-import colors from '../../styles/colors';
-
+import * as mixins from '../styles/mixins';
+import iconSend from '../assets/icons/contact-lime.svg';
+import colors from '../styles/colors';
 
 const ContactSection = styled.div`
     display: flex;
