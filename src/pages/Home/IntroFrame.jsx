@@ -1,11 +1,11 @@
 import Button from "../../components/Button";
 import getContent from "../../utils/getContent";
+import formatText from "../../utils/formatText";
 
 import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
 
 import { icons } from "../../components/Icons";
-
 import portrait from '../../assets/images/portrait.webp';
 
 const IntroFrameElement = styled.section`
@@ -59,12 +59,18 @@ const ProfilePic = styled.img`
 
     border-radius: 50%;
 `
-const IntroLongText = styled.p`
+const IntroLongText = styled.div`
     grid-row: 3;
     grid-column: 1 / 4;
     margin: 0;
     padding: 1rem;
     align-self: center;
+    p {
+        margin: 0%;
+        &:not(:first-child) {
+            margin-top: 0.5rem;
+        }
+    }
 `
 
 const TechStack = styled.div`
@@ -122,7 +128,7 @@ export default function IntroFrame() {
             <IntroShortText>{content.and_im}</IntroShortText>
             <SubTitle>{content.web_dev}</SubTitle>
             <ProfilePic src={portrait} />
-            <IntroLongText>{content.intro_long_text}</IntroLongText>
+            <IntroLongText>{formatText(content.intro_long_text)}</IntroLongText>
             <TechStack>
                 <p>{content.I_use}</p>
                 <div>

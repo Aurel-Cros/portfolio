@@ -11,7 +11,10 @@ const data = {
                 Hi: "Hi ! 👋 My name is",
                 and_im: "and I'm a",
                 web_dev: "fullstack web developer.",
-                intro_long_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis arcu in nisl finibus, id faucibus nulla cursus. Etiam ut massa ante. Donec et odio lacinia, mollis dui ac, lacinia metus. Ut nec lorem tortor. Nam ultricies velit neque, non feugiat turpis dictum nec. Ut id gravida turpis. Maecenas vitae ipsum porta, volutpat nibh scelerisque, ultrices tortor. Maecenas felis nibh, vulputate quis vestibulum eget, auctor in sem. Maecenas et ante quis mi pretium pulvinar eget id ligula.",
+                intro_long_text: `Nice to meet you ! Welcome on my online portfolio. I am a french web developer, with various secondary skills, like music and photography. 🎸📸[rn]
+                I particularly enjoy working with data, and how you can use it, although I've have enjoyed front end more and more as I practiced and got better at it. My favourite technology today would be React, but you know, I haven't tried everything yet. 😉[rn]
+                In the future, I'd love to get more involved in game development - I gave a go at Three.js in my Neon Run project and it was a very fun experience.[rn]
+                I wish you a pleasant time around here ! ✨`,
                 know_more: "More about me...",
                 I_use: "I use",
                 and_more: "and many more...",
@@ -93,7 +96,10 @@ const data = {
                 Hi: "Hello ! 👋 Je m'appelle",
                 and_im: "et je suis",
                 web_dev: "développeur web fullstack.",
-                intro_long_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis arcu in nisl finibus, id faucibus nulla cursus. Etiam ut massa ante. Donec et odio lacinia, mollis dui ac, lacinia metus. Ut nec lorem tortor. Nam ultricies velit neque, non feugiat turpis dictum nec. Ut id gravida turpis. Maecenas vitae ipsum porta, volutpat nibh scelerisque, ultrices tortor. Maecenas felis nibh, vulputate quis vestibulum eget, auctor in sem. Maecenas et ante quis mi pretium pulvinar eget id ligula.",
+                intro_long_text: `Ravi de vous rencontrer ! Bienvenue sur mon portfolio en ligne. Je suis un développeur web français, assorti de diverses autres compétences, comme la musique ou la photographie. 🎸📸 [rn]
+                J'apprécie particulièrement de travailler autour des données, et de réfléchir à leurs utilisations, bien que j'aime de plus en plus le design et le front au fil du temps et de mes progrès. Ma technologie préférée à ce jour serait probablement React, mais il m'en reste plus à découvrir. 😉[rn]
+                À l'avenir, j'aimerais prendre part à des projets de développement de jeu vidéo. J'ai eu un aperçu de Three.js sur un projet récent, et c'était vraiment fun ![rn]
+                Je vous souhaite un agréable moment sur ma page ! ✨`,
                 know_more: "En savoir plus...",
                 I_use: "Je connais",
                 and_more: "entre autres...",
