@@ -5,6 +5,7 @@ import backArrow from '../assets/icons/back-arrow.svg';
 
 const BackLink = styled(Link)`
     position: absolute;
+    z-index: 1;
     top: 1rem;
     left: -1rem;
 	color: transparent;
