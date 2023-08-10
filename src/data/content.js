@@ -70,6 +70,10 @@ const data = {
                         ]
                     }
                 ],
+            },
+            work: {
+                title: "My work"
+                // 
             }
         },
         error: {
@@ -147,6 +151,10 @@ const data = {
                         ]
                     }
                 ]
+            },
+            work: {
+                title: "Mes travaux"
+                // 
             }
         },
         error: {
