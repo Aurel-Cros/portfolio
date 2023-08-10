@@ -72,7 +72,6 @@ function sendMessage(formData) {
 
 export default function ContactFrame() {
     const [form, setForm] = useState(null);
-    console.log(form);
     const content = getContent().pages.home;
     const errors = getContent().error;
     return (
