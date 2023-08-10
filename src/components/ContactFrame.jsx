@@ -65,8 +65,18 @@ const SendBtn = styled.button`
         box-shadow: inset 1px 1px 4px ${colors.greyText};
     }
 `
-function sendMessage(formData) {
-    console.log("VALIDATE AND SEND : ", formData);
+function sendMessage(sendData) {
+    let formData = '';
+    for (const key in sendData) {
+        formData += `${key}=${sendData[key]}&`;
+    }
+    fetch('/portfolio/php/sendMail.php', {
+        method: "POST",
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.slice(0, -1)
+    })
+        .then(response => response.text())
+        .then(data => { console.log(data) })
     // Validate and send
 }
 
