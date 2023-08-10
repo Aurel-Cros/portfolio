@@ -51,6 +51,26 @@ h2 {
 a {
     text-decoration: none;
     color: ${colors.greyText};
+    &.underline {
+        padding-bottom: 0.1rem;
+        background-image: linear-gradient(to right, ${colors.darkBlue}, 50%, ${colors.darkBlue25});
+        background-size: 0 1px;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        transition: background-size 600ms cubic-bezier(.57,0,.25,.63);
+        &:not(.inactive):hover  {
+            background-size: calc(100% - 2.5rem) 1px;
+        }
+        &:before {
+            display: inline-block;
+            content: "";
+            margin: -0.33rem 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-size: 1.5rem 1.5rem;
+            background-repeat: no-repeat;
+    }
+    }
 }
 button {
     font-family: Montserrat;

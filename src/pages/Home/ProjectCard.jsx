@@ -79,11 +79,9 @@ const ProjectLinks = styled.div`
     gap: 1.25rem;
 `
 const DemoLink = styled.a`
-    padding-left :1.5rem;
-    background-image: url(${icons.all.popout});
-    background-size: 1.25rem;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
+    &:before {
+        background-image: url(${icons.all.popout});
+    }
     &.inactive {
         filter: grayscale(100%) contrast(10%);
         cursor: default;
@@ -113,7 +111,7 @@ export default function ProjectCard({ $data }) {
                 </ColumnRight>
                 <ProjectDate>{$data.currentLangText.date}</ProjectDate>
                 <ProjectLinks>
-                    <DemoLink href={$data.demoLink} target="_blank" className={$data.demoLink ? null : 'inactive'}>Live demo</DemoLink>
+                    <DemoLink href={$data.demoLink} target="_blank" className={($data.demoLink ? null : ' inactive') + ' underline'}>Live demo</DemoLink>
                     <Button>{content.More_details}</Button>
                 </ProjectLinks>
             </StyledProjectCard>
