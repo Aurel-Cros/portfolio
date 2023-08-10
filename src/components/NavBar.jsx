@@ -86,10 +86,10 @@ const NavLink = styled(Link)`
 	color: ${colors.whiteBase};
 
 	background-position: 0.5rem 50%, 0 100%;
-	background-size: 1.5rem 1.5rem, 0% 2px;
+	background-size: 1.5rem 1.5rem, 0% 1px;
 	background-repeat: no-repeat;
 
-	transition: background-size 300ms ease-in-out;
+	transition: background-size 600ms ease-in-out;
 
 	padding-left: 2.5rem;
 
@@ -124,7 +124,7 @@ const NavLink = styled(Link)`
 	}
 
 	&:hover {
-		background-size: 1.5rem 1.5rem, 100% 2px;
+		background-size: 1.5rem 1.5rem, 100% 1px;
 	}
 
 `

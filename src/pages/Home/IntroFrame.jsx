@@ -106,11 +106,9 @@ const AboutButton = styled(Button)`
 const CvButton = styled.a`
     grid-column: 1 / -1;
     grid-row: -2;
-    padding: 0.1rem 2rem;
-    background-image: url(${icons.all.cv});
-    background-size: 1.5rem 1.5rem;
-    background-repeat: no-repeat;
-    background-position: 0 50%;
+    &:before {
+        background-image: url(${icons.all.cv});
+    }
 `
 
 export default function IntroFrame() {
@@ -135,7 +133,7 @@ export default function IntroFrame() {
                 </div>
                 <p>{content.and_more}</p>
             </TechStack>
-            <CvButton href="./cv.pdf" target="_blank">{content.CV}</CvButton>
+            <CvButton className="underline" href="./cv.pdf" target="_blank">{content.CV}</CvButton>
             <AboutButton to="/about-me">{content.know_more}</AboutButton>
 
         </IntroFrameElement>
