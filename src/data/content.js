@@ -163,6 +163,11 @@ const data = {
                 // 
             }
         },
+        mail: {
+            sent: "Envoyé",
+            error: "Erreur lors de l'envoi",
+            retry: "Retenter un envoi"
+        },
         error: {
             e404: "Oups ! 🙈 Cette page n'existe pas !",
             tel_format: "Nombres uniquement, séparés par des espaces ou des tirets, précédés ou non du code pays démarrant avec +"
