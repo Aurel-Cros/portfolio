@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
 import colors from '../../styles/colors';
 
-import getContent from '../../utils/getContent';
 import Button from "../../components/Button";
 import { icons } from "../../components/Icons";
+import getContent from '../../utils/getContent';
+import ProjectLinks from '../../components/ProjectLinks';
 
 const StyledProjectCard = styled.div`
     ${mixins.blocks.bdradius}
@@ -12,12 +13,23 @@ const StyledProjectCard = styled.div`
     padding: 0.9rem;
     display: grid;
     grid-template-columns: 25% 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     place-items: center;
     gap: 1rem;
 `
+const ProjectTitle = styled.h3`
+    grid-row: 1;
+    grid-column: 2;
+    place-self: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-variant: all-small-caps;
+    letter-spacing: 0.025rem; 
+    text-align: justify;
+`
 const ColumnLeft = styled.div`
     grid-column: 1;
+    grid-row: 1 / -1;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -26,10 +38,11 @@ const ColumnLeft = styled.div`
 `
 const ColumnRight = styled.div`
     grid-column:2;
+    grid-row: 2/-1;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     gap: 1rem;
     height: 100%;
 `
@@ -58,36 +71,12 @@ const ProjectBadge = styled.img`
     border-radius: 50%;
 `
 
-const ProjectDate = styled.p`
-    ${mixins.text.subtext}
-    grid-column: 1;
-    grid-row: 2;
-    margin: 0;
-    padding: 1rem 0rem 1rem 1.5rem;
-    background-image: url(${icons.all.calendar});
-    background-repeat: no-repeat;
-    background-size: 1.2rem;
-    background-position: 0 50%;
-`
-const ProjectLinks = styled.div`
-    grid-column: 2;
-    grid-row: 2;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1.25rem;
-`
-const DemoLink = styled.a`
-    &:before {
-        background-image: url(${icons.all.popout});
-    }
-`
 export default function ProjectCard({ $data }) {
     const content = getContent().pages.home;
     return (
         <>
             <StyledProjectCard>
+                <ProjectTitle>{$data.name}</ProjectTitle>
                 <ColumnLeft>
                     <ProjectBadge src={$data.image} />
                     <TechStack>
@@ -101,16 +90,14 @@ export default function ProjectCard({ $data }) {
                             })
                         }
                     </TechStack>
+                    <ProjectLinks $data={$data}>
+                    </ProjectLinks>
                 </ColumnLeft>
                 <ColumnRight>
                     <p>{$data.currentLangText.shortText}</p>
-                </ColumnRight>
-                <ProjectDate>{$data.currentLangText.date}</ProjectDate>
-                <ProjectLinks>
-                    <DemoLink href={$data.demoLink} target="_blank" className={($data.demoLink ? null : ' inactive') + ' underline'}>Live demo</DemoLink>
                     <Button to="/my-work">{content.More_details}</Button>
-                </ProjectLinks>
-            </StyledProjectCard>
+                </ColumnRight>
+            </StyledProjectCard >
         </>
     )
 }
