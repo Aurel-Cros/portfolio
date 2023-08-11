@@ -130,6 +130,7 @@ export default function ContactFrame() {
 
     function checkAndSend(e) {
         e.preventDefault();
+        console.log(form);
         const contactForm = document.querySelector("#contact-form");
         contactForm.reportValidity();
         if (contactForm.checkValidity()) {
@@ -150,26 +151,26 @@ export default function ContactFrame() {
             {pathname == '/contact' ? <h1>{content.Contact}</h1> : <h2>{content.Contact}</h2>}
             <form id="contact-form">
                 <ContactSection>
-                    <StyledInput type="text" placeholder={content.contact_name} onBlur={(e) => {
+                    <StyledInput type="text" placeholder={content.contact_name} onChange={(e) => {
                         e.target.reportValidity();
                         if (e.target.checkValidity())
                             setForm({ ...form, name: e.target.value })
                     }} required />
 
-                    <StyledInput type="email" placeholder={content.contact_mail} onBlur={(e) => {
+                    <StyledInput type="email" placeholder={content.contact_mail} onChange={(e) => {
                         e.target.reportValidity();
                         if (e.target.checkValidity())
                             setForm({ ...form, mail: e.target.value })
                     }} pattern="^([a-zA-Z0-9]+([\-\/#!%$'&+*=?^_.\{\|\}~]*[a-zA-Z0-9]+)*){1,63}@([a-zA-Z0-9]+([.\-][a-zA-Z0-9]+)*){1,63}\.[a-z]{2,63}$" title="email-example@domain.extension"
                         required />
 
-                    <StyledInput type="tel" placeholder={content.contact_phone} onBlur={(e) => {
+                    <StyledInput type="tel" placeholder={content.contact_phone} onChange={(e) => {
                         e.target.reportValidity();
                         if (e.target.checkValidity())
                             setForm({ ...form, phone: e.target.value })
                     }} pattern="^(\+|00)?[0-9 \-.]{7,16}$" required title={errors.tel_format} />
 
-                    <StyledTextA minLength="80" placeholder={content.contact_message} onBlur={(e) => {
+                    <StyledTextA minLength="80" placeholder={content.contact_message} onChange={(e) => {
                         e.target.reportValidity();
                         if (e.target.checkValidity())
                             setForm({ ...form, message: e.target.value })
