@@ -1,34 +1,42 @@
 import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
 import colors from '../../styles/colors';
-
+import formatText from '../../utils/formatText';
 import { icons } from "../../components/Icons";
+import getContent from "../../utils/getContent";
 
 const StyledProjectCard = styled.div`
     ${mixins.blocks.bdradius}
     ${mixins.glassmorph.light}
     padding: 0.9rem;
     display: grid;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 20% 1fr;
     place-items: center;
     gap: 1rem;
 `
 const ColumnLeft = styled.div`
+    grid-row: 1/-1;
     grid-column: 1;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-`
-const ColumnRight = styled.div`
-    grid-column:2;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     height: 100%;
+`
+const ColumnRight = styled.div`
+    grid-row: 2;
+    grid-column:2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    height: 100%;
+    p {
+        margin: 0;
+    }
 `
 const TechStack = styled.div`
     position: relative;
@@ -66,6 +74,9 @@ const TechStack = styled.div`
     }
 `
 const ProjectTitle = styled.h2`
+    grid-row: 1;
+    grid-column: 2;
+    place-self: center;
     margin: 0;
     font-size: 1.38rem;
     font-weight: 500;
@@ -116,11 +127,12 @@ const GitLink = styled.a`
     }
 `
 export default function ProjectCardLg({ $data }) {
+    const content = getContent().pages.work;
     return (
         <>
             <StyledProjectCard>
+                <ProjectTitle>{$data.name}</ProjectTitle>
                 <ColumnLeft>
-                    <ProjectTitle>{$data.name}</ProjectTitle>
                     <ProjectBadge src={$data.image} />
                     <TechStack>
                         {
@@ -138,11 +150,11 @@ export default function ProjectCardLg({ $data }) {
                     <ProjectLinks>
                         <ProjectDate>{$data.currentLangText.date}</ProjectDate>
                         <GitLink className="underline" href={$data.github} target="_blank">GitHub</GitLink>
-                        <DemoLink href={$data.demoLink} target="_blank" className={($data.demoLink ? null : 'inactive') + ' underline'}>Live demo</DemoLink>
+                        <DemoLink href={$data.demoLink} target="_blank" className={($data.demoLink ? null : 'inactive') + ' underline'}>{content.seeOnline}</DemoLink>
                     </ProjectLinks>
                 </ColumnLeft>
                 <ColumnRight>
-                    <p>{$data.currentLangText.longText}</p>
+                    {formatText($data.currentLangText.longText)}
                 </ColumnRight>
             </StyledProjectCard>
         </>

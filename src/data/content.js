@@ -75,9 +75,15 @@ const data = {
                 ],
             },
             work: {
-                title: "My work"
+                title: "My work",
+                seeOnline: "See online"
                 // 
             }
+        },
+        mail: {
+            sent: "Sent",
+            error: "Failed to send",
+            retry: "Failure - Retry"
         },
         error: {
             e404: "Oops ! 🙈 There's nothing here !",
@@ -159,7 +165,8 @@ const data = {
                 ]
             },
             work: {
-                title: "Mes travaux"
+                title: "Mes travaux",
+                seeOnline: "Tester"
                 // 
             }
         },

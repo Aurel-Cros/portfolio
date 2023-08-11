@@ -108,7 +108,7 @@ export default function ProjectCard({ $data }) {
                 <ProjectDate>{$data.currentLangText.date}</ProjectDate>
                 <ProjectLinks>
                     <DemoLink href={$data.demoLink} target="_blank" className={($data.demoLink ? null : ' inactive') + ' underline'}>Live demo</DemoLink>
-                    <Button>{content.More_details}</Button>
+                    <Button to="/my-work">{content.More_details}</Button>
                 </ProjectLinks>
             </StyledProjectCard>
         </>
