@@ -6,14 +6,24 @@
     },
     "routes": [
         {
+            "src": "/php/*.php",
             "methods": [
                 "POST"
-            ],
-            "headers": {
-                "Access-Control-Allow-Origin": "https://portfolio-aurel-cros.vercel.app",
-                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-                "Content-Type": "application/json"
-            }
+            ]
+        }
+    ],
+    "headers": [
+        {
+            "key": "Access-Control-Allow-Origin",
+            "value": "https://portfolio-aurel-cros.vercel.app"
+        },
+        {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Origin, X-Requested-With, Content-Type, Accept"
+        },
+        {
+            "key": "Content-Type",
+            "value": "application/json"
         }
     ]
 }
