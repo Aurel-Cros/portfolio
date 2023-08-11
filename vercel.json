@@ -1,29 +1,7 @@
 {
     "functions": {
-        "php/*.php": {
+        "api/sendMail.php": {
             "runtime": "vercel-php@0.6.0"
         }
-    },
-    "routes": [
-        {
-            "src": "/php/*.php",
-            "methods": [
-                "POST"
-            ]
-        }
-    ],
-    "headers": [
-        {
-            "key": "Access-Control-Allow-Origin",
-            "value": "https://portfolio-aurel-cros.vercel.app"
-        },
-        {
-            "key": "Access-Control-Allow-Headers",
-            "value": "Origin, X-Requested-With, Content-Type, Accept"
-        },
-        {
-            "key": "Content-Type",
-            "value": "application/json"
-        }
-    ]
+    }
 }

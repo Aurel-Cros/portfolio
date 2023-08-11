@@ -23,7 +23,7 @@ const config = {
         new MiniCssExtractPlugin(),
         new CopyPlugin({
             patterns: [
-                { from: 'php', to: 'php' }
+                { from: 'php', to: 'api' }
             ]
         })
 
