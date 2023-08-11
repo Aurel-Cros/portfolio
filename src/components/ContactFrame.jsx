@@ -124,13 +124,16 @@ async function sendMessage(sendData) {
 export default function ContactFrame() {
     const [response, setResponse] = useState({ success: null });
     const [form, setForm] = useState(null);
+    const [isSent, setIsSent] = useState(false);
     const content = getContent().pages.home;
     const mail = getContent().mail;
     const errors = getContent().error;
 
     function checkAndSend(e) {
+        if (isSent)
+            return;
         e.preventDefault();
-        console.log(form);
+        
         const contactForm = document.querySelector("#contact-form");
         contactForm.reportValidity();
         if (contactForm.checkValidity()) {
@@ -138,7 +141,10 @@ export default function ContactFrame() {
                 const response = await sendMessage(form);
                 console.log(response);
                 setResponse(response);
+                if (!response.success)
+                    setIsSent(false);
             };
+            setIsSent(true);
             go();
         }
     }
