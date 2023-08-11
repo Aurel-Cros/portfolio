@@ -1,0 +1,19 @@
+{
+    "functions": {
+        "php/*.php": {
+            "runtime": "vercel-php@0.5.2"
+        }
+    },
+    "routes": [
+        {
+            "methods": [
+                "POST"
+            ],
+            "headers": {
+                "Access-Control-Allow-Origin": "https://portfolio-aurel-cros.vercel.app",
+                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+                "Content-Type": "application/json"
+            }
+        }
+    ]
+}
