@@ -7,7 +7,8 @@ const colors = {
     lightBlue: '#3599dc',
     darkBlue: '#153243',
     darkBlue50: 'rgba(21, 50, 67, 0.5)',
-    darkBlue25: 'rgba(21, 50, 67, 0.25)'
+    darkBlue25: 'rgba(21, 50, 67, 0.25)',
+    red: '#FF4343'
 }
 
 export default colors

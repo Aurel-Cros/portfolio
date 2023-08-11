@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import getContent from "../utils/getContent";
 
 import styled from 'styled-components';
 import * as mixins from '../styles/mixins';
-import iconSend from '../assets/icons/contact-lime.svg';
+import { icons } from '../components/Icons';
 import colors from '../styles/colors';
 
 const ContactSection = styled.div`
@@ -45,7 +46,7 @@ const SendBtn = styled.button`
     color: ${colors.lime};
     text-align: center;
 
-    background: url(${iconSend}), linear-gradient(to left, ${colors.darkBlue} 65%, ${colors.lime} 120%);
+    background: url(${icons.all.send}), linear-gradient(to left, ${colors.darkBlue} 65%, ${colors.lime} 120%);
     background-repeat: no-repeat;
     background-size: 1.5rem, 200% 100%;
     background-position:  0.5rem 50%, 100% 0;
@@ -65,18 +66,88 @@ const SendBtn = styled.button`
         box-shadow: inset 1px 1px 4px ${colors.greyText};
     }
 `
-function sendMessage(formData) {
-    console.log("VALIDATE AND SEND : ", formData);
+const BtnSent = styled.div`
+    cursor: default;
+    ${mixins.text.nav}
+    color: ${colors.darkBlue};
+    text-align: center;
+
+    background-image: url(${icons.all.check});
+    background-color: ${colors.lime};
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position:  0.5rem 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+
+    letter-spacing: -0.007rem;
+    text-decoration: none;
+`
+const BtnRetry = styled.button`
+    ${mixins.text.nav}
+    cursor: pointer;
+    color: ${colors.darkBlue};
+    text-align: center;
+
+    background-image: url(${icons.all.error});
+    background-color: ${colors.red};
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position:  0.5rem 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+
+    letter-spacing: -0.007rem;
+    text-decoration: none;
+
+    &:active {
+        scale: 0.975;
+        box-shadow: inset 1px 1px 4px ${colors.greyText};
+    }
+`
+async function sendMessage(sendData) {
+    let formData = '';
+    for (const key in sendData) {
+        formData += `${key}=${sendData[key]}&`;
+    }
+    return await fetch('/php/sendMail.php', {
+        method: "POST",
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.slice(0, -1)
+    })
+        .then(response => response.json())
+        .then(data => data);
     // Validate and send
 }
-
 export default function ContactFrame() {
+    const [response, setResponse] = useState({ success: null });
     const [form, setForm] = useState(null);
     const content = getContent().pages.home;
+    const mail = getContent().mail;
     const errors = getContent().error;
+
+    function checkAndSend(e) {
+        e.preventDefault();
+        const contactForm = document.querySelector("#contact-form");
+        contactForm.reportValidity();
+        if (contactForm.checkValidity()) {
+            const go = async () => {
+                const response = await sendMessage(form);
+                console.log(response);
+                setResponse(response);
+            };
+            go();
+        }
+    }
+
+    const location = useLocation();
+    const { pathname } = location;
+
     return (
         <ContactSection>
-            <h2>{content.Contact}</h2>
+            {pathname == '/contact' ? <h1>{content.Contact}</h1> : <h2>{content.Contact}</h2>}
             <form id="contact-form">
                 <ContactSection>
                     <StyledInput type="text" placeholder={content.contact_name} onBlur={(e) => {
@@ -104,14 +175,17 @@ export default function ContactFrame() {
                             setForm({ ...form, message: e.target.value })
                     }} required />
 
-                    <SendBtn onClick={(e) => {
-                        e.preventDefault();
-                        const contactForm = document.querySelector("#contact-form");
-                        contactForm.reportValidity();
-                        if (contactForm.checkValidity())
-                            sendMessage(form);
+                    {
+                        response.success === null ?
+                            <SendBtn onClick={checkAndSend}>{content.contact_send} </SendBtn>
+                            :
+                            response.success === true ?
+                                <BtnSent>{mail.sent}</BtnSent>
+                                :
+                                <BtnRetry onClick={checkAndSend}>
+                                    {mail.retry}
+                                </BtnRetry>
                     }
-                    }>{content.contact_send} </SendBtn>
                 </ContactSection>
             </form >
         </ContactSection >

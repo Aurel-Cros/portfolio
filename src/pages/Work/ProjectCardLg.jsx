@@ -85,11 +85,17 @@ const ProjectDate = styled.p`
     ${mixins.text.subtext}
     grid-column: 1;
     margin: 0;
-    padding: 0.25rem 1.5rem;
-    background-image: url(${icons.all.calendar});
-    background-repeat: no-repeat;
-    background-size: 1.2rem;
-    background-position: 0 50%;
+    &:before {
+        display: inline-block;
+        content: "";
+        margin: -0.33rem 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url(${icons.all.calendar});
+        background-size: 1.2rem;
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+    }
 `
 const ProjectLinks = styled.div`
     padding: 0.5rem;
@@ -97,22 +103,17 @@ const ProjectLinks = styled.div`
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    gap: 0.25rem;
+    gap: 0.5rem;
 `
 const DemoLink = styled.a`
-    padding : 0.25rem;
-    padding-left: 1.5rem;
-    background-image: url(${icons.all.popout});
-    background-size: 1.25rem;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    &.inactive {
-        filter: grayscale(100%) contrast(10%);
-        cursor: default;
+    &:before {
+        background-image: url(${icons.all.popout});
     }
 `
-const GitLink = styled(DemoLink)`
-    background-image: url(${icons.all.githubdb});
+const GitLink = styled.a`
+    &:before {
+        background-image: url(${icons.all.githubdb});
+    }
 `
 export default function ProjectCardLg({ $data }) {
     return (
@@ -136,8 +137,8 @@ export default function ProjectCardLg({ $data }) {
                     </TechStack>
                     <ProjectLinks>
                         <ProjectDate>{$data.currentLangText.date}</ProjectDate>
-                        <GitLink href={$data.github} target="_blank">GitHub</GitLink>
-                        <DemoLink href={$data.demoLink} target="_blank" className={$data.demoLink ? null : 'inactive'}>Live demo</DemoLink>
+                        <GitLink className="underline" href={$data.github} target="_blank">GitHub</GitLink>
+                        <DemoLink href={$data.demoLink} target="_blank" className={($data.demoLink ? null : 'inactive') + ' underline'}>Live demo</DemoLink>
                     </ProjectLinks>
                 </ColumnLeft>
                 <ColumnRight>

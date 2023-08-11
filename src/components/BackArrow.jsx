@@ -6,11 +6,11 @@ import backArrow from '../assets/icons/back-arrow.svg';
 const BackLink = styled(Link)`
     position: absolute;
     z-index: 1;
-    top: 1rem;
+    top: 0;
     left: -1rem;
 	color: transparent;
 	font-size: 0.1rem;
-    margin: 1.5rem;
+    margin: 0 1.5rem;
 	padding: 1rem;
 	background: url(${backArrow});
 	background-repeat: no-repeat;

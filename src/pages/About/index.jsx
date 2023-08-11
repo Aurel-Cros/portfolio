@@ -64,15 +64,15 @@ export default function About() {
         <AboutSection>
             <h1>{content.title}</h1>
             <ProfilePic src={portrait} />
-            {content.blocks.map((block) => {
-                let output = [<h2>{block.title}</h2>];
+            {content.blocks.map((block, i) => {
+                let output = [<h2 key="title">{block.title}</h2>];
                 if (block.paragraphs) {
                     output.push(...block.paragraphs.map((para, i) => <p key={i}>{para}</p>))
                 }
                 else if (block.list) {
-                    output.push(<ul>{block.list.map((list, i) => <li key={i}>{list.icon + ' ' + list.text}</li>)}</ul>);
+                    output.push(<ul key="list">{block.list.map((list, i) => <li key={i}>{list.icon + ' ' + list.text}</li>)}</ul>);
                 }
-                return <TextBlock>{output}</TextBlock>;
+                return <TextBlock key={'b' + i}>{output}</TextBlock>;
             })}
         </AboutSection>
     )

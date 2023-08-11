@@ -16,6 +16,10 @@ import iconPopout from './../assets/icons/popout.svg';
 import iconGithubDb from './../assets/icons/github-darkblue.svg';
 import iconGithubW from './../assets/icons/github-darkblue.svg';
 
+import iconSend from '../assets/icons/contact-lime.svg';
+import iconCheck from '../assets/icons/checkmark.svg';
+import iconError from '../assets/icons/error-cross.svg';
+
 export const icons = {
     technologies: {
         js: {
@@ -68,6 +72,9 @@ export const icons = {
         cv: iconDownload,
         popout: iconPopout,
         githubdb: iconGithubDb,
-        githubw: iconGithubW
+        githubw: iconGithubW,
+        send: iconSend,
+        check: iconCheck,
+        error: iconError
     }
 }

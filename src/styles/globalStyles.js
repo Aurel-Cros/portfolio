@@ -69,7 +69,12 @@ a {
             height: 1.5rem;
             background-size: 1.5rem 1.5rem;
             background-repeat: no-repeat;
+        }
     }
+    
+    &.inactive {
+        filter: grayscale(100%) contrast(10%);
+        cursor: default;
     }
 }
 button {
