@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: https://portfolio-aurel-cros.vercel.app');
 try {
 
     if ($_SERVER['REQUEST_METHOD'] !== "POST") {
@@ -18,21 +19,21 @@ try {
 
     // SEND MAIL
     $phone = strip_tags($_POST['phone']);
-    $from = strip_tags($_POST['name'] . ' <' . strip_tags($_POST['mail'] . '>'));
+    $mail = strip_tags($_POST['mail']);
+    $from = strip_tags($_POST['name']) . ' <' . $mail . '>';
     $to = 'a.cros@codeur.online';
     $object = "Nouveau message depuis le portfolio !";
-    $inputMessage = strip_tags($_POST['message']);
+    $inputMessage = nl2br(strip_tags($_POST['message']));
 
     $message = "<h1>Contact</h1>
-    $from ($phone)
-    $object
+    Message de : $from (Tel : $phone)
 
     <h2>Message</h2>
     $inputMessage";
 
     $headers = array(
         'From' => $from,
-        'Reply-To' => $from,
+        'Reply-To' => $mail,
         'X-Mailer' => 'PHP/' . phpversion(),
         'Content-type' => 'text/html; charset=utf-8'
     );
