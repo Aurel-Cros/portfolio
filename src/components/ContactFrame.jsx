@@ -112,7 +112,7 @@ async function sendMessage(sendData) {
     for (const key in sendData) {
         formData += `${key}=${sendData[key]}&`;
     }
-    return await fetch('/portfolio/php/sendMail.php', {
+    return await fetch('/php/sendMail.php', {
         method: "POST",
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData.slice(0, -1)

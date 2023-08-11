@@ -3,13 +3,11 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
-
 const stylesHandler = MiniCssExtractPlugin.loader;
-
-
 
 const config = {
     entry: './src/index.js',
@@ -23,6 +21,11 @@ const config = {
             template: './src/index.html'
         }),
         new MiniCssExtractPlugin(),
+        new CopyPlugin({
+            patterns: [
+                { from: 'php', to: 'php' }
+            ]
+        })
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
