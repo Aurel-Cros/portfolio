@@ -4,7 +4,7 @@ import getContent from '../../utils/getContent';
 import getProjects from '../../utils/getProjects';
 
 const SectionTitle = styled.h1`
-    margin-left: 5rem;
+    text-align: center;
 `
 const ProjectsList = styled.div`
     display: flex;

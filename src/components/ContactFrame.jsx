@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import getContent from "../utils/getContent";
 
 import styled from 'styled-components';
@@ -141,9 +142,12 @@ export default function ContactFrame() {
         }
     }
 
+    const location = useLocation();
+    const { pathname } = location;
+
     return (
         <ContactSection>
-            <h2>{content.Contact}</h2>
+            {pathname == '/contact' ? <h1>{content.Contact}</h1> : <h2>{content.Contact}</h2>}
             <form id="contact-form">
                 <ContactSection>
                     <StyledInput type="text" placeholder={content.contact_name} onBlur={(e) => {

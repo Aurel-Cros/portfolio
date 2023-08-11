@@ -82,10 +82,6 @@ const DemoLink = styled.a`
     &:before {
         background-image: url(${icons.all.popout});
     }
-    &.inactive {
-        filter: grayscale(100%) contrast(10%);
-        cursor: default;
-    }
 `
 export default function ProjectCard({ $data }) {
     const content = getContent().pages.home;
