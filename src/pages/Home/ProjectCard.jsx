@@ -11,38 +11,24 @@ const StyledProjectCard = styled.div`
     ${mixins.blocks.bdradius}
     ${mixins.glassmorph.light}
     padding: 0.9rem;
-    display: grid;
-    grid-template-columns: 25% 1fr;
-    grid-template-rows: auto 1fr auto;
-    place-items: center;
-    gap: 1rem;
 `
+
 const ProjectTitle = styled.h3`
-    grid-row: 1;
-    grid-column: 2;
-    place-self: center;
+    margin: 0.5rem 0;
     font-size: 1.25rem;
     font-weight: 500;
     font-variant: all-small-caps;
     letter-spacing: 0.025rem; 
-    text-align: justify;
+    text-align: center;
 `
 const ColumnLeft = styled.div`
-    grid-column: 1;
-    grid-row: 1 / -1;
+    float:left;
+    margin: 1rem;
+    width: min(40%, 200px);
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: 1rem;
-`
-const ColumnRight = styled.div`
-    grid-column:2;
-    grid-row: 2/-1;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
     gap: 1rem;
     height: 100%;
 `
@@ -76,7 +62,6 @@ export default function ProjectCard({ $data }) {
     return (
         <>
             <StyledProjectCard>
-                <ProjectTitle>{$data.name}</ProjectTitle>
                 <ColumnLeft>
                     <ProjectBadge src={$data.image} />
                     <TechStack>
@@ -92,11 +77,10 @@ export default function ProjectCard({ $data }) {
                     </TechStack>
                     <ProjectLinks $data={$data}>
                     </ProjectLinks>
-                </ColumnLeft>
-                <ColumnRight>
-                    <p>{$data.currentLangText.shortText}</p>
                     <Button to="/my-work">{content.More_details}</Button>
-                </ColumnRight>
+                </ColumnLeft>
+                <ProjectTitle>{$data.name}</ProjectTitle>
+                <p>{$data.currentLangText.shortText}</p>
             </StyledProjectCard >
         </>
     )

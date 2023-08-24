@@ -83,9 +83,12 @@ a {
 button {
     font-family: Montserrat;
 }
-@media screen and (max-width: 820px){
+@media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
     :root {
         font-size: 12px;
+    }
+    main {
+        width: min(600px, 90%);
     }
     h1 {
         font-size: 2.4rem;

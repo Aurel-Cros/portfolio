@@ -21,6 +21,12 @@ const AboutSection = styled.section`
         overflow: hidden;
         white-space: nowrap;
     }
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        display: block flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const ProfilePic = styled.img`
@@ -34,6 +40,10 @@ const ProfilePic = styled.img`
     scale: -1 1;
 
     border-radius: 1.7rem;
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        place-self: center;
+    }
 `
 
 const TextBlock = styled.div`

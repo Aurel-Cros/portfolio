@@ -42,17 +42,17 @@ const LangSelectorElement = styled.div`
 `
 
 export default function LangSelector() {
-    const { lang, setLang } = useContext(LangContext);
+	const { lang, setLang } = useContext(LangContext);
 
-    function switchLang(newState) {
-        setLang(newState);
-    }
+	function switchLang(newState) {
+		setLang(newState);
+	}
 
-    return (
-        <LangSelectorElement lang={lang} >
-            <img onClick={() => { switchLang('fr') }} src={frFlag}></img>
-            <img onClick={() => { switchLang('en') }} src={ukFlag}></img>
-            <div className="background"></div>
-        </LangSelectorElement>
-    )
+	return (
+		<LangSelectorElement lang={lang} >
+			<img alt="Drapeau français" onClick={() => { switchLang('fr') }} src={frFlag}></img>
+			<img alt="Flag of england" onClick={() => { switchLang('en') }} src={ukFlag}></img>
+			<div className="background"></div>
+		</LangSelectorElement>
+	)
 }

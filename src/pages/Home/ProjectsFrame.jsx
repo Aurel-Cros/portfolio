@@ -13,13 +13,23 @@ const ProjectsSection = styled.section`
 `
 
 const SectionTitle = styled.h2`
-    margin-left: 3.2rem;
+    margin: 3.2rem;
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px) {
+        margin: 3 0;
+        text-align: center;
+    }
 `
 const ProjectsList = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     gap: 1.2rem;
+    
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px) {
+        display: flex;
+        flex-flow: column;
+    }
 `
 const MoreProjects = styled(Link)`
     ${mixins.glassmorph.light}

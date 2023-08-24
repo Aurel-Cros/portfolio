@@ -27,18 +27,24 @@ const IntroFrameElement = styled.section`
         white-space: nowrap;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
         display: flex;
         flex-flow: column nowrap;
-        gap: 0.75rem;
+        gap: 1rem;
+        place-items: center;
     }
 `
 const IntroShortText = styled.p`
-        margin: auto 0 0;
-        line-height: 80%;
-        grid-column: 1/3;
-        justify-self: end;
-        margin-right: 1.5rem;
+    margin: auto 0 0;
+    line-height: 80%;
+    grid-column: 1/3;
+    justify-self: end;
+    margin-right: 1.5rem;
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        margin-right: 0;
+    }
+
 `
 
 const SubTitle = styled.div`
@@ -65,7 +71,7 @@ const ProfilePic = styled.img`
 
     border-radius: 50%;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
         align-self: center;
     }
 `
@@ -121,7 +127,7 @@ const AboutButton = styled(Button)`
     grid-row: 4;
     place-self: start end;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
         align-self: center;
     }
 `
@@ -133,7 +139,7 @@ const CvButton = styled.a`
         background-image: url(${icons.all.cv});
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
         margin-bottom: 0.5rem;
     }
 `
