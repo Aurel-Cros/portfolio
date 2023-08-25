@@ -38,9 +38,13 @@ try {
         'Content-type' => 'text/html; charset=utf-8'
     );
 
-    $success = mail($to, $object, $message, $headers);
-    echo json_encode(['success' => $success]);
-    http_response_code(200);
+    if (mail($to, $object, $message, $headers)) {
+        echo json_encode(['success' => true]);
+        http_response_code(200);
+    } else {
+        echo json_encode(['success' => false, 'message' => 'Mail could not be sent']);
+        http_response_code(200);
+    }
 } catch (Exception $e) {
     $err = $e->getMessage();
     echo json_encode(['success' => false, 'message' => $err]);
