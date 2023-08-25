@@ -51,6 +51,7 @@ const TextBlock = styled.div`
     grid-column: 1/3;
     h2 {
         margin-top: 0;
+        text-align: center;
     }
     &:last-child {
         grid-row: 3;
@@ -63,7 +64,7 @@ const TextBlock = styled.div`
         gap: 1.5rem;
     }
     p, ul {
-        margin-left: 2.5rem;
+        margin-left: 2rem;
         padding: 0;
     }
 `
