@@ -26,13 +26,25 @@ const IntroFrameElement = styled.section`
         overflow: hidden;
         white-space: nowrap;
     }
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        place-items: center;
+    }
 `
 const IntroShortText = styled.p`
-        margin: auto 0 0;
-        line-height: 80%;
-        grid-column: 1/3;
-        justify-self: end;
-        margin-right: 1.5rem;
+    margin: auto 0 0;
+    line-height: 80%;
+    grid-column: 1/3;
+    justify-self: end;
+    margin-right: 1.5rem;
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        margin-right: 0;
+    }
+
 `
 
 const SubTitle = styled.div`
@@ -49,7 +61,7 @@ const SubTitle = styled.div`
 const ProfilePic = styled.img`
     grid-column: -2;
     grid-row: 2/4;
-    place-self: start start;
+    place-self: start;
 
     width: 12.5rem;
     aspect-ratio: 1;
@@ -58,6 +70,10 @@ const ProfilePic = styled.img`
     scale: -1 1;
 
     border-radius: 50%;
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        align-self: center;
+    }
 `
 const IntroLongText = styled.div`
     grid-row: 3;
@@ -78,6 +94,7 @@ const TechStack = styled.div`
     grid-column: 1 / 4;
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 
     p {
 
@@ -92,9 +109,11 @@ const TechStack = styled.div`
     }
     div {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
+        max-width: 100%;
     }
     img {
         max-width: 3rem;
@@ -107,6 +126,10 @@ const AboutButton = styled(Button)`
     grid-column: 3/4;
     grid-row: 4;
     place-self: start end;
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        align-self: center;
+    }
 `
 
 const CvButton = styled.a`
@@ -114,6 +137,10 @@ const CvButton = styled.a`
     grid-row: -2;
     &:before {
         background-image: url(${icons.all.cv});
+    }
+
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        margin-bottom: 0.5rem;
     }
 `
 

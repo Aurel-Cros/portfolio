@@ -9,15 +9,11 @@ const StyledProjectCard = styled.div`
     ${mixins.blocks.bdradius}
     ${mixins.glassmorph.light}
     padding: 0.9rem;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 20% 1fr;
-    place-items: center;
-    gap: 1rem;
 `
 const ColumnLeft = styled.div`
-    grid-row: 1/-1;
-    grid-column: 1;
+    float:left;
+    margin: 1rem;
+    width: min(40%, 200px);
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -25,19 +21,7 @@ const ColumnLeft = styled.div`
     gap: 1rem;
     height: 100%;
 `
-const ColumnRight = styled.div`
-    grid-row: 2;
-    grid-column:2;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
-    height: 100%;
-    p {
-        margin: 0;
-    }
-`
+
 const TechStack = styled.div`
     position: relative;
     border-radius: 0.68966rem;
@@ -74,15 +58,12 @@ const TechStack = styled.div`
     }
 `
 const ProjectTitle = styled.h2`
-    grid-row: 1;
-    grid-column: 2;
-    place-self: center;
-    margin: 0;
+    margin: 0.5rem 0;
     font-size: 1.38rem;
     font-weight: 500;
     font-variant: all-small-caps;
     letter-spacing: 0.07586rem; 
-    text-align: justify;
+    text-align: center;
 `
 const ProjectBadge = styled.img`
     object-fit: cover;
@@ -96,7 +77,6 @@ export default function ProjectCardLg({ $data }) {
     return (
         <>
             <StyledProjectCard>
-                <ProjectTitle>{$data.name}</ProjectTitle>
                 <ColumnLeft>
                     <ProjectBadge src={$data.image} />
                     <TechStack>
@@ -115,9 +95,8 @@ export default function ProjectCardLg({ $data }) {
                     <ProjectLinks $data={$data}>
                     </ProjectLinks>
                 </ColumnLeft>
-                <ColumnRight>
-                    {formatText($data.currentLangText.longText)}
-                </ColumnRight>
+                <ProjectTitle>{$data.name}</ProjectTitle>
+                {formatText($data.currentLangText.longText)}
             </StyledProjectCard>
         </>
     )

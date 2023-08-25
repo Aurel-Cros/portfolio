@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
@@ -37,7 +37,13 @@ const NavWrapper = styled.div`
 
 	background: ${colors.darkBlue50};
 
-	transition: left 500ms ease-in-out;
+	transition: left 500ms ease-in-out 500ms;
+
+	@media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+		grid-template-columns: auto auto 1fr;
+		gap: 0.25rem;
+		padding: 1.5rem 0.5rem;
+    }
 `
 const SocialLinks = styled.div`
 	display: flex;
@@ -91,7 +97,7 @@ const NavLink = styled(Link)`
 
 	transition: background-size 600ms ease-in-out;
 
-	padding-left: 2.5rem;
+	padding: 0.25rem 0 0 2.5rem;
 
 	&.about {
 		background-image: url(${iconAbout}),
@@ -127,6 +133,11 @@ const NavLink = styled(Link)`
 		background-size: 1.5rem 1.5rem, 100% 1px;
 	}
 
+
+	@media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+		font-size: 1rem;
+    }
+
 `
 const NavLinksDiv = styled.div`
 	grid-column: 3;
@@ -135,44 +146,23 @@ const NavLinksDiv = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-`
-const NavSwitch = styled.button`
-	grid-column: 4;
-	margin: 0;
-	padding: 0;
-	border: none;
-	background-color: ${colors.lightBlue};
-	cursor: pointer;
-	width: 2.3rem;
-	height: 2.3rem;
-	border: 1px solid ${colors.darkBlue50};
-	border-radius: 0.5rem;
-	position: absolute;
-	right: 1%;
 
-	span {
-		box-sizing: border-box;
-		border-radius: 2px;
-		width: 60%;
-		height: 0.2rem;
-		background-color: ${colors.whiteBase};
-		position: absolute;
-		top: calc(50% - 2px);
-		left: 20%;
-		transform-origin: center;
-		rotate: 0;
-		transition: rotate 300ms linear;
-
-		&:first-child {
-			rotate: ${({ $isOpen }) => $isOpen ? 0 : 90}deg;
-		}
-	}
+	@media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+    }
 `
 
 export default function NavBar() {
-	const [isOpen, setOpen] = useState(true);
+	const [isOpen, setOpen] = useState(false);
 
 	const content = getContent().navbar;
+
+	useEffect(() => {
+		setOpen(true);
+	}, [])
+
 	return (
 		<NavDiv>
 			<NavWrapper $isOpen={isOpen}>
@@ -197,11 +187,6 @@ export default function NavBar() {
 				</NavLinksDiv>
 
 			</NavWrapper>
-
-			<NavSwitch $isOpen={isOpen} onClick={() => { setOpen(!isOpen) }}>
-				<span></span>
-				<span></span>
-			</NavSwitch>
 		</NavDiv>
 	)
 }

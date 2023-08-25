@@ -2,20 +2,12 @@
 header('Access-Control-Allow-Origin: https://portfolio-aurel-cros.vercel.app');
 try {
 
-    if ($_SERVER['REQUEST_METHOD'] !== "POST") {
+    if ($_SERVER['REQUEST_METHOD'] !== "POST") 
         throw new Exception('No post');
-        http_response_code(400);
-    }
-    if (
-        !isset($_POST['name']) ||
-        !isset($_POST['mail']) ||
-        !isset($_POST['phone']) ||
-        !isset($_POST['message'])
-    ) {
-        var_dump($_POST);
+    
+    if (!isset($_POST['name'], $_POST['mail'], $_POST['phone'], $_POST['message']))
         throw new Exception('Bad request');
-        http_response_code(400);
-    }
+    
 
     // SEND MAIL
     $phone = strip_tags($_POST['phone']);
@@ -48,5 +40,5 @@ try {
 } catch (Exception $e) {
     $err = $e->getMessage();
     echo json_encode(['success' => false, 'message' => $err]);
-    http_response_code(200);
+    http_response_code(400);
 }

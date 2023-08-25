@@ -4,6 +4,9 @@ import colors from './colors';
 import backgroundImage from '../assets/images/newyork-background-pp.webp';
 
 const GlobalStyles = createGlobalStyle`
+html {
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     font-family: Montserrat, serif;
@@ -80,9 +83,15 @@ a {
 button {
     font-family: Montserrat;
 }
-@media screen and (max-width: 820px){
+@media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
     :root {
         font-size: 12px;
+    }
+    main {
+        width: min(600px, 90%);
+    }
+    h1 {
+        font-size: 2.4rem;
     }
 }
 `
