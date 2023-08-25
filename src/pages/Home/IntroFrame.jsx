@@ -166,7 +166,7 @@ export default function IntroFrame() {
                 </div>
                 <p>{content.and_more}</p>
             </TechStack>
-            <CvButton className="underline" href="./cv.pdf" target="_blank">{content.CV}</CvButton>
+            <CvButton className="underline" href="./files/cv.pdf" target="_blank">{content.CV}</CvButton>
             <AboutButton to="/about-me">{content.know_more}</AboutButton>
 
         </IntroFrameElement>

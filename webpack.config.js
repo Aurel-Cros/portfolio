@@ -61,6 +61,13 @@ const config = {
                     filename: 'assets/icons/[name][ext]'
                 }
             },
+            {
+                test: /\.(pdf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'files/[name][ext]'
+                }
+            },
 
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
