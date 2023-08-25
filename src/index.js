@@ -6,6 +6,8 @@ import './assets/icons/about.svg';
 import './assets/icons/projects.svg';
 import './assets/icons/contact-darkblue.svg';
 
+import './cv.pdf';
+
 import FontStyles from './styles/globalFonts';
 import GlobalStyles from './styles/globalStyles';
 
