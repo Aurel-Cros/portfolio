@@ -7,6 +7,7 @@ import * as mixins from '../../styles/mixins';
 
 import { icons } from "../../components/Icons";
 import portrait from '../../assets/images/portrait.webp';
+import { useEffect, useState } from "react";
 
 const IntroFrameElement = styled.section`
     ${mixins.glassmorph.light};
@@ -17,6 +18,10 @@ const IntroFrameElement = styled.section`
     grid-template-columns: 1fr 4fr 20rem auto;
     place-items: start;
     
+    position: relative;
+    left: ${({ $pos }) => $pos}%;
+    transition: left 500ms ease-in-out 350ms;
+
     h1 {
         margin: auto 0 0;
         line-height: 80%;
@@ -144,11 +149,17 @@ const CvButton = styled.a`
 `
 
 export default function IntroFrame() {
+    const [posLeft, setPosLeft] = useState(-105);
+
+    useEffect(() => {
+        setPosLeft(0);
+    }, []);
+
     const content = getContent().pages.home;
     const mainIcons = Object.entries(icons.technologies);
 
     return (
-        <IntroFrameElement>
+        <IntroFrameElement $pos={posLeft}>
             <IntroShortText>{content.Hi}</IntroShortText>
             <h1>Aurélien Cros</h1>
             <IntroShortText>{content.and_im}</IntroShortText>

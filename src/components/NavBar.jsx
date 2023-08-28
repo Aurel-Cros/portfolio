@@ -37,7 +37,7 @@ const NavWrapper = styled.div`
 
 	background: ${colors.darkBlue50};
 
-	transition: left 500ms ease-in-out 500ms;
+	transition: left 500ms ease-in-out 250ms;
 
 	@media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
 		grid-template-columns: auto auto 1fr;

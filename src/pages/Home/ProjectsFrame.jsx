@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import getContent from "../../utils/getContent";
 import getProjects from "../../utils/getProjects";
@@ -10,6 +11,9 @@ import * as mixins from '../../styles/mixins';
 import colors from "../../styles/colors";
 
 const ProjectsSection = styled.section`
+    position: relative;
+    left: ${({ $pos }) => $pos}%;
+    transition: left 500ms ease-in-out 450ms;
 `
 
 const SectionTitle = styled.h2`
@@ -53,10 +57,16 @@ const MoreProjects = styled(Link)`
 `
 
 export default function ProjectsFrame() {
+    const [posLeft, setPosLeft] = useState(105);
+
+    useEffect(() => {
+        setPosLeft(0);
+    }, []);
+
     const content = getContent().pages.home;
-    const projects = getProjects().filter((project, index) => index <= 2);
+    const projects = getProjects().filter((p, index) => index <= 2);
     return (
-        <ProjectsSection>
+        <ProjectsSection $pos={posLeft}>
             <SectionTitle>{content.Projects}</SectionTitle>
             <ProjectsList>
                 {projects.map(project =>
