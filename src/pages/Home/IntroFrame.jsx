@@ -111,9 +111,8 @@ const TechStack = styled.div`
 
 const AboutButton = styled(Button)`
     padding: 0.25rem 2.3rem;
-    grid-column: 3/4;
-    grid-row: 4;
-    place-self: start end;
+    grid-area: 3 / 3 / 4 / 4;
+    place-self: end;
 
     @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
         align-self: center;
@@ -150,6 +149,7 @@ export default function IntroFrame() {
             <SubTitle>{content.web_dev}</SubTitle>
             <GlowFrame $width='12.5rem' src={portrait} />
             <IntroLongText>{formatText(content.intro_long_text)}</IntroLongText>
+            <CvButton className="underline" href="./files/cv.pdf" target="_blank">{content.CV}</CvButton>
             <TechStack>
                 <p>{content.I_use}</p>
                 <div>
@@ -160,7 +160,6 @@ export default function IntroFrame() {
                 </div>
                 <p>{content.and_more}</p>
             </TechStack>
-            <CvButton className="underline" href="./files/cv.pdf" target="_blank">{content.CV}</CvButton>
             <AboutButton to="/about-me">{content.know_more}</AboutButton>
 
         </IntroFrameElement>
