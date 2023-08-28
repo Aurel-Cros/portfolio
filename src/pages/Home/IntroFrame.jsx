@@ -149,7 +149,7 @@ export default function IntroFrame() {
             <SubTitle>{content.web_dev}</SubTitle>
             <GlowFrame $width='12.5rem' src={portrait} />
             <IntroLongText>{formatText(content.intro_long_text)}</IntroLongText>
-            <CvButton className="underline" href="./files/cv.pdf" target="_blank">{content.CV}</CvButton>
+            <AboutButton to="/about-me">{content.know_more}</AboutButton>
             <TechStack>
                 <p>{content.I_use}</p>
                 <div>
@@ -160,7 +160,7 @@ export default function IntroFrame() {
                 </div>
                 <p>{content.and_more}</p>
             </TechStack>
-            <AboutButton to="/about-me">{content.know_more}</AboutButton>
+            <CvButton className="underline" href="./files/cv.pdf" target="_blank">{content.CV}</CvButton>
 
         </IntroFrameElement>
     )
