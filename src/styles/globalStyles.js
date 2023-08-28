@@ -85,7 +85,7 @@ button {
 }
 @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
     :root {
-        font-size: 12px;
+        font-size: clamp(13px, 4vw, 16px);
     }
     main {
         width: min(600px, 90%);
