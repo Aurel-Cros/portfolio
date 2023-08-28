@@ -67,6 +67,7 @@ const IntroLongText = styled.div`
     grid-row: 3;
     grid-column: 1 / 4;
     margin: 0;
+    margin-bottom: 1rem;
     padding: 1rem;
     align-self: center;
     p {
@@ -74,6 +75,9 @@ const IntroLongText = styled.div`
         &:not(:first-child) {
             margin-top: 0.5rem;
         }
+    }
+    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+        margin-bottom: 0;
     }
 `
 

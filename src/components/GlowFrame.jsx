@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     position: relative;
-    margin: 3rem auto;
     width: ${({ $width }) => $width};
     aspect-ratio: 1;
 
