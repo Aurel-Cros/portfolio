@@ -15,7 +15,6 @@ const IntroFrameElement = styled.section`
     padding: 1rem;
     row-gap: 0.5rem;
     grid-template-columns: 1fr 4fr 20rem auto;
-    grid-template-rows: 20% 2rem auto 2fr auto;
     place-items: start;
     
     h1 {
@@ -134,7 +133,7 @@ const AboutButton = styled(Button)`
 
 const CvButton = styled.a`
     grid-column: 1 / -1;
-    grid-row: -2;
+    grid-row: 5 / 6;
     &:before {
         background-image: url(${icons.all.cv});
     }
