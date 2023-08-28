@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import * as mixins from '../../styles/mixins';
 
 import { icons } from "../../components/Icons";
+import GlowFrame from "../../components/GlowFrame";
 import portrait from '../../assets/images/portrait.webp';
 import { useEffect, useState } from "react";
 
@@ -62,23 +63,6 @@ const SubTitle = styled.div`
 
 `
 
-const ProfilePic = styled.img`
-    grid-column: -2;
-    grid-row: 2/4;
-    place-self: start;
-
-    width: 12.5rem;
-    aspect-ratio: 1;
-    object-fit: cover;
-    object-position: top center;
-    scale: -1 1;
-
-    border-radius: 50%;
-
-    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
-        align-self: center;
-    }
-`
 const IntroLongText = styled.div`
     grid-row: 3;
     grid-column: 1 / 4;
@@ -164,7 +148,7 @@ export default function IntroFrame() {
             <h1>Aurélien Cros</h1>
             <IntroShortText>{content.and_im}</IntroShortText>
             <SubTitle>{content.web_dev}</SubTitle>
-            <ProfilePic src={portrait} />
+            <GlowFrame $width='12.5rem' src={portrait} />
             <IntroLongText>{formatText(content.intro_long_text)}</IntroLongText>
             <TechStack>
                 <p>{content.I_use}</p>
