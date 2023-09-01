@@ -6,13 +6,15 @@ const FontStyles = createGlobalStyle`
 
 @font-face {
   font-family: Montserrat;
-  src: url(${Montserrat}) format('truetype');
+  src: local('Montserrat'), url(${Montserrat}) format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: Montserrat;
   font-style: italic;
-  src: url(${MontserratItalic}) format('truetype');
+  src: local('Montserrat-Italic'), local('Montserrat'), url(${MontserratItalic}) format('truetype');
+  font-display: swap;
 }
 `;
 

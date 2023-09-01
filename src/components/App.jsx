@@ -19,12 +19,12 @@ export default function App() {
                 <main>
                     <BackArrow />
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about-me" element={<About />} />
-                        <Route path="/my-work" element={<Work />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/project/:project-id" element={<Project />} />
-                        <Route path="*" element={<Error />} />
+                        <Route path={window.location.origin + "/"} element={<Home />} />
+                        <Route path={window.location.origin + "/about-me"} element={<About />} />
+                        <Route path={window.location.origin + "/my-work"} element={<Work />} />
+                        <Route path={window.location.origin + "/contact"} element={<Contact />} />
+                        <Route path={window.location.origin + "/project/:project-id"} element={<Project />} />
+                        <Route path={window.location.origin + "*"} element={<Error />} />
                     </Routes>
                 </main>
             </LangProvider>
