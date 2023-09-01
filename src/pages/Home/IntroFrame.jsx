@@ -20,7 +20,7 @@ const IntroFrameElement = styled.section`
     place-items: start;
     
     position: relative;
-    left: ${({ $pos }) => $pos}%;
+    left: ${({ $pos }) => $pos}vw;
     transition: left 500ms ease-in-out 350ms;
 
     h1 {
@@ -136,7 +136,7 @@ const CvButton = styled.a`
 `
 
 export default function IntroFrame() {
-    const [posLeft, setPosLeft] = useState(-105);
+    const [posLeft, setPosLeft] = useState(-100);
 
     useEffect(() => {
         setPosLeft(0);
@@ -146,12 +146,12 @@ export default function IntroFrame() {
     const mainIcons = Object.entries(icons.technologies);
 
     return (
-        <IntroFrameElement $pos={posLeft}>
+        <IntroFrameElement itemscope="http://schema.org/Person" $pos={posLeft}>
             <IntroShortText>{content.Hi}</IntroShortText>
-            <h1>Aurélien Cros</h1>
+            <h1 itemprop="name">Aurélien Cros</h1>
             <IntroShortText>{content.and_im}</IntroShortText>
-            <SubTitle>{content.web_dev}</SubTitle>
-            <GlowFrame $width='12.5rem' src={portrait} />
+            <SubTitle itemprop="jobTitle">{content.web_dev}</SubTitle>
+            <GlowFrame itemprop="image" $width='12.5rem' src={portrait} />
             <IntroLongText>{formatText(content.intro_long_text)}</IntroLongText>
             <AboutButton to="/about-me">{content.know_more}</AboutButton>
             <TechStack>
