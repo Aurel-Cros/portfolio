@@ -146,12 +146,12 @@ export default function IntroFrame() {
     const mainIcons = Object.entries(icons.technologies);
 
     return (
-        <IntroFrameElement itemscope="http://schema.org/Person" $pos={posLeft}>
+        <IntroFrameElement itemScope="http://schema.org/Person" $pos={posLeft}>
             <IntroShortText>{content.Hi}</IntroShortText>
-            <h1 itemprop="name">Aurélien Cros</h1>
+            <h1 itemProp="name">Aurélien Cros</h1>
             <IntroShortText>{content.and_im}</IntroShortText>
-            <SubTitle itemprop="jobTitle">{content.web_dev}</SubTitle>
-            <GlowFrame itemprop="image" width='12.5rem' src={portrait} />
+            <SubTitle itemProp="jobTitle">{content.web_dev}</SubTitle>
+            <GlowFrame itemProp="image" width='12.5rem' src={portrait} />
             <IntroLongText>{formatText(content.intro_long_text)}</IntroLongText>
             <AboutButton to="/about-me">{content.know_more}</AboutButton>
             <TechStack>
