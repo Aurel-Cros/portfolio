@@ -5,13 +5,10 @@ const Container = styled.div`
     width: ${({ $width }) => $width};
     aspect-ratio: 1;
 
-    img {
-        grid-column: -2;
-        grid-row: 2/4;
-        place-self: start;
-        
+    img {        
         width: 100%;
         aspect-ratio: 1;
+        height: auto;
         object-fit: cover;
         object-position: top center;
         scale: -1 1;
