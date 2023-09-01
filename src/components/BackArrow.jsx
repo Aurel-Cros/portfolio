@@ -32,6 +32,6 @@ export default function () {
     const { pathname } = location;
     const target = /\/project\/(?:.+)/.test(pathname) ? "/my-work" : "/"
     return pathname !== "/" ? (
-        <BackLink to={target}>Retour</BackLink>
+        <BackLink to={window.location.origin + target}>Retour</BackLink>
     ) : null
 }

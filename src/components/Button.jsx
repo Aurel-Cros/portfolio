@@ -32,7 +32,7 @@ const StyledButton = styled(Link)`
 `
 export default function Button({ to, className, children }) {
     return (
-        <StyledButton to={to} className={className}>
+        <StyledButton to={window.location.origin + to} className={className}>
             {children}
         </StyledButton>
     )

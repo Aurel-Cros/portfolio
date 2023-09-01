@@ -46,9 +46,9 @@ const Container = styled.div`
 }
 `
 
-export default function GlowFrame({ src, $width }) {
-    return (<Container $width={$width}>
+export default function GlowFrame({ src, width }) {
+    return (<Container $width={width}>
         <div id="bg"></div>
-        <img src={src}></img>
+        <img src={src} width="200" height="200" alt="Portrait"></img>
     </Container>)
 }

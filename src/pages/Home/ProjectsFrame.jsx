@@ -72,7 +72,7 @@ export default function ProjectsFrame() {
                 {projects.map(project =>
                     <ProjectCard key={project.name + project.date} $data={project}></ProjectCard>
                 )}
-                <MoreProjects to="/my-work">{content.All_projects}</MoreProjects>
+                <MoreProjects to={window.location.origin + "/my-work"}>{content.All_projects}</MoreProjects>
             </ProjectsList>
         </ProjectsSection>
     )

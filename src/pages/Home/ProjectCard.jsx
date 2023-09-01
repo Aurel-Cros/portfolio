@@ -63,7 +63,7 @@ export default function ProjectCard({ $data }) {
         <>
             <StyledProjectCard>
                 <ColumnLeft>
-                    <ProjectBadge src={$data.image} />
+                    <ProjectBadge src={$data.image} height="86" width="86" alt={$data.name} />
                     <TechStack>
                         {
                             $data.techs.map(tech => {

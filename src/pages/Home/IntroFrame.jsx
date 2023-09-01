@@ -151,7 +151,7 @@ export default function IntroFrame() {
             <h1 itemprop="name">Aurélien Cros</h1>
             <IntroShortText>{content.and_im}</IntroShortText>
             <SubTitle itemprop="jobTitle">{content.web_dev}</SubTitle>
-            <GlowFrame itemprop="image" $width='12.5rem' src={portrait} />
+            <GlowFrame itemprop="image" width='12.5rem' src={portrait} />
             <IntroLongText>{formatText(content.intro_long_text)}</IntroLongText>
             <AboutButton to="/about-me">{content.know_more}</AboutButton>
             <TechStack>

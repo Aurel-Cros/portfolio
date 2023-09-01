@@ -181,9 +181,9 @@ export default function NavBar() {
 				</SocialLinks>
 
 				<NavLinksDiv>
-					<NavLink to="/about-me" className="about">{content.about}</NavLink>
-					<NavLink to="/my-work" className="work">{content.work}</NavLink>
-					<NavLink to="/contact" className="contact">{content.contact}</NavLink>
+					<NavLink to={window.location.origin + "/about-me"} className="about">{content.about}</NavLink>
+					<NavLink to={window.location.origin + "/my-work"} className="work">{content.work}</NavLink>
+					<NavLink to={window.location.origin + "/contact"} className="contact">{content.contact}</NavLink>
 				</NavLinksDiv>
 
 			</NavWrapper>
