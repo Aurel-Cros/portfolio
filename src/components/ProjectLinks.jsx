@@ -43,7 +43,7 @@ export default function ProjectLinks({ $data }) {
         <Container>
             <ProjectDate>{$data.currentLangText.date}</ProjectDate>
             <GitLink className="underline" href={$data.github} target="_blank">GitHub</GitLink>
-            <DemoLink href={$data.demoLink} target="_blank" className={($data.demoLink ? null : 'inactive') + ' underline'}>{content.seeOnline}</DemoLink>
+            {$data.demoLink && <DemoLink href={$data.demoLink} target="_blank" className={($data.demoLink ? null : 'inactive') + ' underline'}>{content.seeOnline}</DemoLink>}
         </Container>
     )
 }
