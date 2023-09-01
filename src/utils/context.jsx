@@ -4,9 +4,12 @@ export const LangContext = createContext();
 export const LangProvider = ({ children }) => {
     const [lang, setLangState] = useState(
         localStorage.getItem('lang') || 'fr');
+    document.querySelector("html").setAttribute("lang", lang);
+
     const setLang = (value) => {
-        setLangState(value);
+        document.querySelector("html").setAttribute("lang", value);
         localStorage.setItem('lang', value);
+        setLangState(value);
     }
     return (
         <LangContext.Provider value={{ lang, setLang }}>
