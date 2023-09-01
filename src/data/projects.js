@@ -1,6 +1,6 @@
 import imageNeon from '../assets/images/introReadMe.webp';
 import imageWTR from '../assets/images/wildthings.webp';
-import imageWeather from '../assets/images/Thunder.png';
+import imageWeather from '../assets/images/weatherApp.webp';
 
 const projects = [
     {
