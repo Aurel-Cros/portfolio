@@ -1,6 +1,7 @@
 import imageNeon from '../assets/images/introReadMe.webp';
 import imageWTR from '../assets/images/wildthings.webp';
 import imageWeather from '../assets/images/weatherApp.webp';
+import imageWordpress from '../assets/images/wordpress.png';
 
 const projects = [
     {
@@ -28,6 +29,25 @@ const projects = [
                 Le coeur de l'appli réside dans la technologie WebSocket accessible par Javascript et Node, permettant au client émetteur de push des données sans attendre un polling des clients récepteurs. Wingman récupère les données directement depuis la mémoire partagée du jeu et les relait au serveur WebSocket au besoin et dans un délai minime.[rn]
                 Electron est la plateforme idéale pour ce projet, notamment grâce à son embarquation de Node en back end, permettant l'accès à la mémoire partagée du programme de manière super facile grâce à la librairie "acc-node-wrapper". L'appli est donc uniquement nécessaire pour le client émetteur, le reste du groupe pouvant recevoir les données depuis un navigateur standard.[rn]
                 C'est un projet excitant, ambitieux à mon échelle mais largement à ma portée, et qui me tient à coeur puisqu'il me permet de participer à la vie et au succès de mon écurie de manière unique.
+                `
+            }
+        }
+    },
+    {
+        name: "Kitty Machine    ",
+        techs: ["wordpress", "react"],
+        image: imageWordpress,
+        github: 'https://github.com/Aurel-Cros/kittymachine',
+        text: {
+            en: {
+                date: "2023",
+                shortText: "A small plugin for Wordpress, that does the very important task of displaying a random cat.",
+                longText: 'It originated from the lack of inspiration to create a Wordpress plugin as a practice projet. I like cats, I would want some of my Wordpress website if it was online... So yeah, it seemed obvious.[rn] I used React to build a component that does all the job, and masterfully (not) navigated through Wordpress files to make the plugin easy to use : enable the plugin, add the plugin on your page from Gutenberg blocks.[rn] Pending review from the Wordpress team, but it will be there eventually !'
+            },
+            fr: {
+                date: "2023",
+                shortText: "Un simple plugin pour Wordpress, qui effectue la tâche essentielle d'afficher un chat au hasard.",
+                longText: `Cela a commencé par le manque d'inspiration pour créer un plugin WordPress en tant que projet d'entraînement. J'aime les chats, j'aimerais en avoir sur mon site WordPress s'il était en ligne... Donc ouais, cela semblait évident. [rn] J'ai utilisé React pour construire un composant qui fait tout le travail, et j'ai navigué avec maîtrise (c'est faux) à travers les fichiers WordPress pour rendre le plugin facile à utiliser : activez le plugin, ajoutez le sur votre page à partir des blocs Gutenberg. [rn] En attente de validation de l'équipe WordPress, mais il sera là éventuellement !
                 `
             }
         }

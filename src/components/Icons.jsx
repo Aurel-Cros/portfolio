@@ -9,6 +9,7 @@ import iconSass from '../assets/icons/sass.svg';
 import iconNode from '../assets/icons/nodejs.svg';
 import iconVite from '../assets/icons/vite.svg';
 import iconThree from '../assets/icons/three.svg';
+import iconWP from '../assets/icons/wordpress.png';
 
 import iconDownload from '../assets/icons/download.svg';
 import iconCal from './../assets/icons/calendar.svg';
@@ -65,6 +66,10 @@ export const icons = {
         vite: {
             name: 'Vite',
             icon: iconVite
+        },
+        wordpress: {
+            name: 'Wordpress',
+            icon: iconWP
         }
     },
     all: {
