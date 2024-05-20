@@ -10,6 +10,8 @@ import iconNode from '../assets/icons/nodejs.svg';
 import iconVite from '../assets/icons/vite.svg';
 import iconThree from '../assets/icons/three.svg';
 import iconWP from '../assets/icons/wordpress.png';
+import iconSymfony from '../assets/icons/symfony.png';
+import iconNext from '../assets/icons/next-js.svg';
 
 import iconDownload from '../assets/icons/download.svg';
 import iconCal from './../assets/icons/calendar.svg';
@@ -23,6 +25,14 @@ import iconError from '../assets/icons/error-cross.svg';
 
 export const icons = {
     technologies: {
+        next: {
+            name: "Next.js",
+            icon: iconNext,
+        },
+        symfony: {
+            name: "Symfony",
+            icon: iconSymfony,
+        },
         js: {
             name: 'Javascript',
             icon: iconJS

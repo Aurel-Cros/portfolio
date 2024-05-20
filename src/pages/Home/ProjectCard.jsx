@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import { icons } from "../../components/Icons";
 import getContent from '../../utils/getContent';
 import ProjectLinks from '../../components/ProjectLinks';
+import defaultIcon from '../../assets/icons/cmd-app.svg';
 
 const StyledProjectCard = styled.div`
     ${mixins.blocks.bdradius}
@@ -63,7 +64,7 @@ export default function ProjectCard({ $data }) {
         <>
             <StyledProjectCard>
                 <ColumnLeft>
-                    <ProjectBadge src={$data.image} height="86" width="86" alt={$data.name} />
+                    <ProjectBadge src={$data.image ?? defaultIcon} height="86" width="86" alt={$data.name} />
                     <TechStack>
                         {
                             $data.techs.map(tech => {
