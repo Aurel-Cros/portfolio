@@ -57,16 +57,11 @@ const MoreProjects = styled(Link)`
 `
 
 export default function ProjectsFrame() {
-    const [posLeft, setPosLeft] = useState(105);
-
-    useEffect(() => {
-        setPosLeft(0);
-    }, []);
 
     const content = getContent().pages.home;
     const projects = getProjects().filter((p, index) => index <= 2);
     return (
-        <ProjectsSection $pos={posLeft}>
+        <ProjectsSection $pos='0'>
             <SectionTitle>{content.Projects}</SectionTitle>
             <ProjectsList>
                 {projects.map(project =>

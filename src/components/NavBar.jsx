@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
@@ -155,17 +154,12 @@ const NavLinksDiv = styled.div`
 `
 
 export default function NavBar() {
-	const [isOpen, setOpen] = useState(false);
 
 	const content = getContent().navbar;
 
-	useEffect(() => {
-		setOpen(true);
-	}, [])
-
 	return (
 		<NavDiv>
-			<NavWrapper $isOpen={isOpen}>
+			<NavWrapper $isOpen={true}>
 				<LangSelector />
 
 				<SocialLinks>

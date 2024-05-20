@@ -8,7 +8,6 @@ import * as mixins from '../../styles/mixins';
 import { icons } from "../../components/Icons";
 import GlowFrame from "../../components/GlowFrame";
 import portrait from '../../assets/images/portrait.webp';
-import { useEffect, useState } from "react";
 
 const IntroFrameElement = styled.section`
     ${mixins.glassmorph.light};
@@ -51,7 +50,6 @@ const IntroShortText = styled.p`
     }
 
 `
-
 const SubTitle = styled.div`
     ${mixins.text.subtitle}
     margin: auto 0 0;
@@ -62,7 +60,6 @@ const SubTitle = styled.div`
     white-space: nowrap;
 
 `
-
 const IntroLongText = styled.div`
     grid-row: 3;
     grid-column: 1 / 4;
@@ -80,7 +77,6 @@ const IntroLongText = styled.div`
         margin-bottom: 0;
     }
 `
-
 const TechStack = styled.div`
     grid-row: 4;
     grid-column: 1 / 4;
@@ -112,7 +108,6 @@ const TechStack = styled.div`
         max-height: 2rem;
     }
 `
-
 const AboutButton = styled(Button)`
     padding: 0.25rem 2.3rem;
     grid-area: 3 / 3 / 4 / 4;
@@ -122,7 +117,6 @@ const AboutButton = styled(Button)`
         align-self: center;
     }
 `
-
 const CvButton = styled.a`
     grid-column: 1 / -1;
     grid-row: 5 / 6;
@@ -136,17 +130,12 @@ const CvButton = styled.a`
 `
 
 export default function IntroFrame() {
-    const [posLeft, setPosLeft] = useState(-100);
-
-    useEffect(() => {
-        setPosLeft(0);
-    }, []);
 
     const content = getContent().pages.home;
     const mainIcons = Object.entries(icons.technologies);
 
     return (
-        <IntroFrameElement itemScope="http://schema.org/Person" $pos={posLeft}>
+        <IntroFrameElement itemScope="http://schema.org/Person" $pos='0'>
             <IntroShortText>{content.Hi}</IntroShortText>
             <h1 itemProp="name">Aurélien Cros</h1>
             <IntroShortText>{content.and_im}</IntroShortText>
