@@ -112,7 +112,7 @@ async function sendMessage(sendData) {
     for (const key in sendData) {
         formData += `${key}=${sendData[key]}&`;
     }
-    return await fetch('https://aurel.richard-cross.fr/sendMail.php', {
+    return await fetch('https://aurelien-cros.fr/sendMail.php', {
         method: "POST",
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData.slice(0, -1)
@@ -133,7 +133,7 @@ export default function ContactFrame() {
         if (isSent)
             return;
         e.preventDefault();
-        
+
         const contactForm = document.querySelector("#contact-form");
         contactForm.reportValidity();
         if (contactForm.checkValidity()) {

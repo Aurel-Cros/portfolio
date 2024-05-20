@@ -1,19 +1,19 @@
 <?php
-header('Access-Control-Allow-Origin: https://portfolio-aurel-cros.vercel.app');
+header('Access-Control-Allow-Origin: https://aurelien-cros.fr');
 try {
 
-    if ($_SERVER['REQUEST_METHOD'] !== "POST") 
+    if ($_SERVER['REQUEST_METHOD'] !== "POST")
         throw new Exception('No post');
-    
+
     if (!isset($_POST['name'], $_POST['mail'], $_POST['phone'], $_POST['message']))
         throw new Exception('Bad request');
-    
+
 
     // SEND MAIL
     $phone = strip_tags($_POST['phone']);
     $mail = strip_tags($_POST['mail']);
     $from = strip_tags($_POST['name']) . ' <' . $mail . '>';
-    $to = 'a.cros@codeur.online';
+    $to = '';
     $object = "Nouveau message depuis le portfolio !";
     $inputMessage = nl2br(strip_tags($_POST['message']));
 

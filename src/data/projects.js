@@ -13,12 +13,12 @@ const projects = [
             fr: {
                 date: "2024",
                 shortText: "Un outil simple pour facilement éditer des devis et factures fait avec Next.js",
-                longText: ""
+                longText: "Un outil simple pour facilement éditer des devis et factures fait avec Next.js"
             },
             en: {
                 date: "2024",
                 shortText: "A simple tool to easily create invoices, made with Next.js",
-                longText: ""
+                longText: "A simple tool to easily create invoices, made with Next.js"
             }
         }
     },
