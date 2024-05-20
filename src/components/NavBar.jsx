@@ -20,7 +20,7 @@ const NavDiv = styled.div`
 	place-items: center;
 `
 const NavWrapper = styled.div`
-	${mixins.glassmorph.medium}
+	${mixins.glassmorph.light}
 	padding: 1.5rem 1.75rem;
 	position: relative;
 	z-index: 0;
@@ -33,8 +33,6 @@ const NavWrapper = styled.div`
 	grid-template-columns: auto auto 1fr 4rem;
 	place-content: center;
 	place-items: center;
-
-	background: ${colors.darkBlue50};
 
 	transition: left 500ms ease-in-out 250ms;
 
