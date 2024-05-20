@@ -145,7 +145,12 @@ export default function ContactFrame() {
                     setIsSent(false);
             };
             setIsSent(true);
-            go();
+            try {
+                go();
+            } catch (e) {
+                setIsSent(false);
+                setResponse({ success: false });
+            }
         }
     }
 
