@@ -8,7 +8,7 @@ import './assets/icons/contact-darkblue.svg';
 
 import './assets/images/favicon.png';
 
-import './cv.pdf';
+import './CV_AURELIEN_CROS_Sept_24.pdf';
 
 import FontStyles from './styles/globalFonts';
 import GlobalStyles from './styles/globalStyles';
