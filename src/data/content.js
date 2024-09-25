@@ -68,7 +68,7 @@ const data = {
                             },
                             {
                                 icon: `🌠`,
-                                text: `Science ! I am very much at loss with the many, very technical things, but I couldn't be more passionate with how our universe works.Magnetism is a frequent subject of awe for me, as well as stars - I have rarely been as hyped as the day we got the first shots from JWST. Needless to say, I got shivers for every discovery made since then ! Circling back to video games, I am eagerly waiting for Starfield to come out, as previous modern space exploration games have been underwhelming so far.`
+                                text: `Science ! I am very much at loss with the many, very technical things, but I couldn't be more passionate with how our universe works.Magnetism is a frequent subject of awe for me, as well as stars - I have rarely been as hyped as the day we got the first shots from JWST. Needless to say, I got shivers for every discovery made since then ! Circling back to video games, I have been thrilled by games like Elite:Dangerous or Starfield so far.`
                             }
                         ]
                     }
@@ -142,11 +142,11 @@ const data = {
                         list: [
                             {
                                 icon: `🎮`,
-                                text: `Ayant grandi dans les années 90 et 2000, j'ai vu la révolution technologique appliquée aux jeux vidéo et je suis évidemment tombé dedans comme Obélix dans la potion. Malgré mes goûts et exigences très marqués, j'ai été soufflé à de nombreuses reprises et le suis encore régulièrement à notre époque. La direction artistique des jeux Ori et leurs scénarii m'émeut à chaque fois, plus qu'aucun autre jeu et de loin.`
+                                text: `Ayant grandi dans les années 90 et 2000, j'ai vu la révolution technologique appliquée aux jeux vidéo et je suis évidemment tombé dedans comme Obélix dans la potion. Malgré mes goûts et exigences très marqués, j'ai été soufflé à de nombreuses reprises et le suis encore régulièrement à notre époque. La direction artistique des jeux Ori et leur écriture m'émeuvent à chaque fois, plus qu'aucun autre jeu et de loin.`
                             },
                             {
                                 icon: `🏎️`,
-                                text: `L'automobile et le sport auto ont toujours été une passion. Des modèles réduits à la simulation de course aujourd'hui, en passant par la F1 et plus encore, je ne demeure qu'un enfant émerveillé par tout ça. Prendre part à de vraies courses est malheureusement extrêmement coûteux, je me contente du simulateur, mais en gardant une part de sérieux malgré tout. Je suis pilote pour l'écurie anglais Wild things Racing, pour laquelle je développe une application de stratégie afin d'apporter une pierre unique à l'édifice.`
+                                text: `L'automobile et le sport auto ont toujours été une passion. Des modèles réduits à la simulation de course aujourd'hui, en passant par la F1 et plus encore, je ne demeure qu'un enfant émerveillé par tout ça. Prendre part à de vraies courses est malheureusement extrêmement coûteux, je me contente du simulateur, mais en gardant une part de sérieux malgré tout. Je suis pilote pour l'écurie anglaise Wild things Racing, pour laquelle je développe une application de stratégie afin d'apporter une pierre unique à l'édifice.`
                             },
                             {
                                 icon: `🎸`,

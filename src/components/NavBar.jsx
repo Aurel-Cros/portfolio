@@ -168,7 +168,7 @@ export default function NavBar() {
 						<a href="https://www.github.com/Aurel-Cros" target="_blank">
 							<img alt="GitHub link" src="./assets/icons/github-white.svg"></img>
 						</a>
-						<a href="https://www.linkedin.com/in/aurel-cros/" target="_blank">
+						<a href="https://www.linkedin.com/in/aurelien-cros/" target="_blank">
 							<img alt="LinkedIn link" src="./assets/icons/linkedin.svg"></img>
 						</a>
 					</div>
