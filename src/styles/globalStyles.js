@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import * as mixins from './mixins';
 import colors from './colors';
-import backgroundImage from '../assets/images/newyork-background-pp.webp';
 
 const GlobalStyles = createGlobalStyle`
 html {
@@ -17,7 +15,7 @@ body {
 
 #root {
 	min-height: 100vh;
-	background-image: url(${backgroundImage});
+	background-image: linear-gradient(to top, ${colors.whiteBase} 0%, ${colors.whiteBase} 30%, ${colors.lightBlue} 300%);
 	background-size: cover;
 	background-position: center bottom;
     padding-bottom: 2rem;
@@ -25,8 +23,8 @@ body {
 
 main {
     position: relative;
-    width: min(75rem, 95vw);
-    margin: 1.4rem auto 0;
+    margin: 0 auto;
+    padding: clamp(0.125rem, 6vw, 4rem);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -34,7 +32,7 @@ main {
 }
 h1 {
     font-family: Montserrat;
-    font-size: 3.3rem;
+    font-size: clamp(1.8rem, 6vw, 3.3rem);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -83,7 +81,7 @@ a {
 button {
     font-family: Montserrat;
 }
-@media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+@media screen and (max-width: ${import.meta.env.MOBILE_WIDTH_THRESHOLD}px){
     :root {
         font-size: clamp(13px, 4vw, 16px);
     }

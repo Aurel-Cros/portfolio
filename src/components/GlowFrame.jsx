@@ -15,7 +15,7 @@ const Container = styled.div`
         
         border-radius: 50%;
     }
-    @media screen and (max-width: ${process.env.MOBILE_WIDTH_THRESHOLD}px){
+    @media screen and (max-width: ${import.meta.env.MOBILE_WIDTH_THRESHOLD}px){
         align-self: center;
     }
     
